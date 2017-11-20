@@ -19,14 +19,12 @@
 
 ## 准备 - Preparation
 
-1. 操作系统：Windows x64 7/8/8.1/10，OSX 10.10+，Ubuntu 14.04+
+1. 操作系统：Windows x64 7+，OSX 10.10+，Ubuntu 14.04+
 2. R：Microsoft R Open最新版本（[下载地址](https://mran.microsoft.com/download/)，该版本各平台安装包均有，容易配置安装，自带MKL矩阵运算加速）
 3. RStudio：最新Preview版本（[下载地址](https://www.rstudio.com/products/rstudio/download/preview/)，Preview版本有些新特性比较实用）
-4. Python：最新版本Anaconda Python 3.6（[下载地址](https://www.anaconda.com/download/)，用于Jupyter基础环境）
+4. Python：最新版本Anaconda Python 3（[下载地址](https://www.anaconda.com/download/)，用于Jupyter基础环境）
 5. nteract：最新版本（[下载地址](https://nteract.io/)，用于Notebook浏览和编辑）
 6. Typora：最新版本（[下载地址](http://typora.io)，用于Markdown浏览）
-7. Git：最新版本（[下载地址](https://git-scm.com/download/win)，用于更新Git仓库）
-8. 如上程序请预先下载，请优先选择64位程序，但无需安装，待课程需要时再指导安装。
 
 ## 数据科学简介 - Data Science Introduction
 
