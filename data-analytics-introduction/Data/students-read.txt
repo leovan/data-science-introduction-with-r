@@ -1,0 +1,6 @@
+ID	Name	Gender	Score
+1	Leo	Male	90
+2	Tom	Male	80
+3	Olivia	Female	89
+4	John	Male	77
+5	Jacy	Female	83

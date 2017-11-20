@@ -1,0 +1,9 @@
+.Rhistory
+.Rproj.user
+.RData
+.vscode
+.DS_Store
+*.log
+*.dump
+/*/Slides
+
