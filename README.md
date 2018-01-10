@@ -99,12 +99,12 @@
    - 偏差和方差
 3. 超参数优化
 
-## 分类算法（上） - Classification Angorithms Part 1
+## 分类算法（上） - Classification Algorithms Part 1
 
 1. 逻辑回归
 2. 决策树
 
-## 分类算法（下） - Classification Angorithms Part 2
+## 分类算法（下） - Classification Algorithms Part 2
 
 1. Bagging
 2. Boosting
