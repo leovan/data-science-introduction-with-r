@@ -87,7 +87,7 @@
    - 特征选择
    - 特征监控
 
-## 模型评估&参数优化 - Model Evaluation & Hyperparameter Optimization
+## 模型评估 & 超参数优化 - Model Evaluation & Hyperparameter Optimization
 
 1. 模型性能评估
    - 回归问题
