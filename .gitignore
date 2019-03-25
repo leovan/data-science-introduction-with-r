@@ -14,3 +14,4 @@
 # slides source
 /*/Slides/*
 !/*/Slides/*.Rmd
+!/*/Slides/images/
