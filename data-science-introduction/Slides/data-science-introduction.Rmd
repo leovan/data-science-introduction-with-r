@@ -1,0 +1,459 @@
+---
+title: "数据科学简介"
+subtitle: "Introduction of Data Science"
+author: "Mr. Black"
+date: ""
+output:
+  xaringan::moon_reader:
+    css: ["css/zh-CN.css", "css/emojione.min.css", "css/extra.css", "css/print.css"]
+    includes:
+      after_body: "extra/after.html"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+options(servr.deamon = TRUE)
+options(htmltools.dir.version = FALSE)
+```
+
+<div class="content-page">
+  <p class="content-page-title">目录</p>
+  <li class="content-page-list">数据科学简介</li>
+  <li class="content-page-list">数据科学工具箱</li>
+  <li class="content-page-list">数据科学分工与流程</li>
+</div>
+
+???
+
+今天上午我们简单对数据科学以及相关的工具箱和方法论进行一个简答的介绍，主要分为3个部分，如Slide所示。
+
+---
+class: inverse, center, middle
+
+# 数据科学简介
+
+---
+class:
+
+## 数据科学 Data Science
+
+1974年，Peter Naur出版了**“计算方法的简介调查”**<sup>[1]</sup>一书。该书中**“数据科学”（Data Science）**一词被大量使用，同时对其作出定义：“数据科学是一门专门处理数据的科学。它被授权处置与其他科学领域中有关数据的表现与关联”。定义中强调了数据同其他科学领域之间存在的关系。
+
+1997年，Jeff Wu在**“统计=数据科学?”**<sup>[2]</sup>一文中重新探索了“统计（Statistics）”一词的含义，他认为统计工作应该是由数据收集，数据建模和分析以及决策制定三部分组成。同时他倡导将“统计”一词重命名为“数据科学”，将“统计学家（Statisticians）”一词重命名为**“数据科学家（Data Scientists）”**。
+
+.footnote[
+[1] P. Naur, Concise Survey of Computer Methods. Petrocelli Books, 1974.
+
+[2] C. J. Wu, “Statistics = data science?,” 1997.
+]
+
+---
+class:
+
+## 数据科学 Data Science
+
+2001年，William S. Cleveland发表**“数据科学：为扩大统计技术领域的行动计划”**<sup>[1]</sup>。文章计划扩大统计领域相关的技术工作范围，正是由于范围的扩张，作者将这一改变的领域称之为“数据科学”。计划中划分了6大技术范围，其具体内容和占比如下：
+
+1. **（25%）多学科调查**：包括在相关主题领域内的数据分析协作。
+2. **（20%）处理数据的模型和方法**：包括统计模型；建模方法；等。
+3. **（15%）数据计算**：包括硬件系统；软件系统；计算算法。
+4. **（15%）教学方法**：包括小学，中学，大学，研究生，继续教育和企业培训的教学课程规划。
+5. **（5%）工具评估**：包括实践中工具使用情况的调查，新工具需求的调查以及开发新工具的过程研究。
+6. **（20%）理论**：包括数据科学的基础；模型方法，数据计算，教学和工具评估的基本方法；模型方法，数据计算，教学和评估的数学调查。
+
+.footnote[
+[1] W. S. Cleveland, “Data science: an action plan for expanding the technical areas of the feld of statistics,”International statistical review, vol. 69, no. 1, pp. 21–26, 2001.
+]
+
+---
+class:
+
+## 数据科学 Data Science
+
+2002年，国际科学理事会的科技数据委员会（CODATA）创立**Data Science Journal**杂志。2003年，**Journal of Data Science**创立。杂志为所有的数据工作者提供了一个很好的交流平台。
+
+2005年，美国国家科学委员会发布了**“长期数字数据收集促成二十一世纪的研究与教育”**<sup>[1]</sup>。报告中将数据科学家（Data scientists）定义为信息和计算机科学家，数据库和软件工程师，程序员等那些对于成功管理信息数据至关重要的人们。
+
+2012年，Tom Davenport和D.J. Patil在哈佛商业评论中发表**“数据科学家：21世纪最性感工作”**<sup>[2]</sup>。文章中将数据科学家评为21世纪最性感的职业。
+
+.footnote[
+[1] N. S. Board, “Long-lived digital data collections enabling research and education in the 21st century.”http://www.nsf.gov/pubs/2005/nsb0540/, 2005.
+
+[2]  T. H. Davenport and D. Patil, “Data scientist: Te sexiest job of the 21st century,” Harvard Business Review Magazine: http://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-Century/ar/1, 2012.
+]
+
+???
+
+以上内容基本总结了从“数据科学”从出现一直发展到现在的基本情况，可以说数据科学从诞生之初就表现出了其不同于一般科学的独特之处。
+
+---
+class:
+
+## 数据产品 Data Products
+
+Patil在**“数据的柔术：将数据转化为产品的艺术”**<sup>[1]</sup>一文中解释说“**数据产品**是通过使用数据促进最终目标的产品”。因此可以说数据产品并不仅仅是指数据分析（Data Analysis）, 向高管提供的建议或是导致业务流程改善的洞察，而应该是一套完整有形的问题解决系统。
+
+为了方便大家清楚理解数据产品的概念，我们比较两款产品：Excel和PYMK。Excel大家应该比较熟悉，是微软Office套件中用于数据处理、统计分析和辅助决策的表格处理软件。PYMK相对比较陌生，PYMK全称为People You May Know，是LinkedIn一套人物关系预测系统。
+
+.footnote[
+[1] D. Patil, “Data jujitsu: the art of turning data into product,” tech. rep., O’Reilly Media, Inc., 2012.
+]
+
+---
+class:
+
+## 数据产品 Data Products
+
+.center[
+**Excel和PYMK特性对比**
+]
+
+| 特性     | Excel                          | PYMK                           |
+| :------  | :----------------------------  | :----------------------------  |
+| 系统     | 否（通用分析软件）             | 是（预测系统）                 |
+| 数据源   | 用户指定，无具体形式和内容要求 | 人员年龄，性别，工作等个人信息 |
+| 数据理解 | 视用户操作而定                 | 对数据有较充分理解             |
+| 算法应用 | 视用户操作而定                 | 使用相关智能算法               |
+| 目标     | 无具体目标                     | 寻找出可能认识的人             |
+| 结果     | 不同操作产生不同结果           | 可能认识的人或人物关系网       |
+
+???
+
+从表中可以看出，PYMK是在深度理解用户数据基础上，充分利用数学算法对数据进行加工处理，解决特定问题的系统。所以它可算是典型的数据产品。而Excel更适合规类为一个通用的数据分析处理工具。
+
+---
+class:
+
+## 数据产品 Data Products
+
+在**“什么是数据科学?”**<sup>[1]</sup>一文中，Mike Loukides的第一句话就指出了**“未来是属于那些能将数据转化成产品的人和公司的”**，也就是说数据的真正价值只有在进行深度加工处理并形成产品之后才能够被体现出来。可以说有价值的数据是一个有待开发的金矿，需要人们利用“数据产品”这把利器去开采才能够得到金灿灿的黄金。同时，文章也指出了数据科学和数据产品之间的关系：数据科学使数据产品的创造成为可能，也就是数据科学在数据产品的创造开发过程中扮演着至关重要的角色。
+
+.footnote[
+[1] M. Loukides, “What is data science?,” tech. rep., O’Reilly Media, Inc., 2010.
+]
+
+---
+class:
+
+## 跨界 Crossover
+
+**跨界（Crossover）**一词在不同的领域有着各自具体的含义。**跨界音乐（Crossover Music）**<sup>[1]</sup>是指一个音乐作品被诠释成两种或更多的品味或流派。**跨界营销（Crossover Marketing）**<sup>[2]</sup>意味着打破传统的营销思维模式，实现多个品牌从不同角度诠释同一个用户特征，发挥不同类别品牌的协同效应。因此，跨界可以称得上是多种资源的一种融合创新。
+
+开发数据产品同样也是一场跨界知识的融合。无论是组建一个数据产品开发团队还是成长为一个真正的数据科学家，都要对所涉及到的各种知识及其技能有所涉猎。当然“全”也并不意味着不“专”，正如开发数据产品的核心是数据科学的应用一样，数据科学家应掌握扎实的数据科学理论和应用能力。
+
+.footnote[
+[1] Wikipedia, “Crossover (music).” http://en.wikipedia.org/wiki/Crossover_music.
+
+[2] 邓勇兵, “跨界营销: 体验的综合诠释,” 中国市场, 2007.
+]
+
+---
+class:
+
+## 跨界 Crossover
+
+| 知识类型 | 知识名称                   | 和“开发数据产品”的关系 | 重要程度 |
+| :------- | :------------------------- | :--------------------- | :------- |
+| 领域知识 | 行业知识（管理，金融）     | 业务理解               | ★★☆☆☆ |
+| 数学统计 | 基础数学（微积分，代数）   | 数据科学（基础）       | ★★★☆☆ |
+| 数学统计 | 统计学                     | 数据科学（统计分析）   | ★★★★☆ |
+| 数学统计 | 应用数学（机器学习）       | 数据科学（建模分析）   | ★★★★☆ |
+| 数学统计 | 统计编程（R，Python）      | 数据科学（模型计算）   | ★★★★☆ |
+| 工程知识 | 数据库知识（MySQL，HIVE）  | 数据源获取             | ★★★☆☆ |   
+| 工程知识 | 软件工程（系统设计，Java） | 系统开发（基础）       | ★★★☆☆ |
+| 工程知识 | 计算框架（Hadoop，Spark）  | 系统开发（框架选择）   | ★★★☆☆ |
+| 工程知识 | 前端技术（配色，HTML）     | 数据可视化             | ★★★☆☆ |
+
+???
+
+从表可以看出一个数据科学家需要多方面的知识，但同时也应该具有自己的专长，也就是对数据科学的充分认知。所应掌握和了解的知识也体现了一个真正的数据科学家的职责：了解问题及需求，获取数据，清理数据， 理解数据，分析数据，将数据转化成产品, 最终解决问题。
+
+---
+class: inverse, center, middle
+
+# 数据科学工具箱
+
+---
+class:
+
+## 数据科学常用工具
+
+在数据科学领域，我们会用到多种多样的编程语言和工具。而编程语言和工具的选择取决于多种因素，例如：项目需要（目标，预算，时间等）；项目负责人和成员的专业背景和偏好，工具成本，功能性，可用性，学习曲线等等。
+
+一般而言，这些编程语言和工具可以划分为如下5类：
+
+1. 统计编程语言：SPSS，SAS，R，Python。
+2. 数据挖掘和机器学习工具箱：Weka（Java），scikit-learn（Python）。
+3. 传统编程语言：C/C++，Java，Scala。
+4. 分析平台和框架：RapidMiner，KNIME，Hadoop，Spark，Hive。
+5. 其他：SQL，Excel，Tableau。
+
+KDnuggets每年都会进行一项关于“What Analytics, Big Data, Data Mining, Data Science software you used in the past 12 months for a real project?”（过去12个月中你在真实项目中所使用的数据分析，大数据，数据挖掘和数据科学软件是什么？）。在2016年，该项调查共有2895个人参与，最终得票最高的10个编程语言和工具分别为：R，Python，SQL，Excel，RapidMiner，Hadoop，Spark，Tableau，KNIME和scikit-learn。
+
+---
+class:
+
+## 数据科学常用工具
+
+| 编程语言和工具 | 2016年得票 | 2016年排名 | 2014占比 | 2015占比 | 2016占比 |
+| :------------- | :--------- | :--------- | :------- | :------- | :------- |
+| R              | 1419       | 1          | 38.5%    | 46.9%    | 49%      |
+| Python         | 1325       | 2          | 19.5%    | 30.3%    | 45.8%    |
+| SQL            | 1029       | 3          | 25.3%    | 30.9%    | 35.5%    |
+| Excel          | 972        | 4          | 25.8%    | 22.9%    | 33.6%    |
+| RapidMiner     | 944        | 5          | 44.2%    | 31.5%    | 32.6%    |
+| Hadoop         | 641        | 6          | 12.7%    | 18.4%    | 22.1%    |
+| Spark          | 624        | 7          | 2.6%     | 11.3%    | 21.6%    |
+| Tableau        | 536        | 8          | 9.1%     | 12.4%    | 18.5%    |
+| KNIME          | 521        | 9          | 15%      | 20%      | 18%      |
+| scikit-learn   | 497        | 10         | na       | 8.3%     | 17.2%    |
+
+---
+class:
+
+## 数据科学之战：R与Python
+
+.center[
+### 发展历史
+]
+
+**R语言**<sup>[1]</sup>是一套用于统计编程和绘图的自由软件编程语言与操作环境。R语言是S语言的一种延伸和实现，由Ross Ihaka和Robert Gentleman于1995年设计开发的一种开源语言，因此称之为R语言。作为S语言的一种延伸，R语言主要利用C语言，Fortran和R语言开发完成
+
+**Python**是由Guido Van Rossem于1991年创建的一门强调效率和代码可读性的编程语言。Python由Python软件基金会（PSF）负责其发展，其开发灵感主要来自于C语言和Modula-3，部分来自于ABC语言。Python的名字取自喜剧蒙提·派森的飞行马戏团（Monty Python's Flying Circus）。
+
+.footnote[
+[1] R. Project, “What is r?.” http://www.r-project.org/about.html.
+]
+
+---
+class:
+
+## 数据科学之战：R与Python
+
+.center[
+### 学习和使用
+]
+
+R语言可以使用简短的几行代码完成一个统计模型。R语言也有其自己的代码样式表，但很少有人使用，不过保持一个良好的代码风格是一个还好的习惯。R语言可以使用不同点方式实现相同的功能，例如显式的循环（for）和隐式的循环（apply方法）等。在R语言中，可以还轻松的实现复杂的公式，同时一些常用的统计模型也是现成的方便使用。由于R语言的特点，开始学习时将会面临一个陡峭的学习曲线，不过一旦入门后就可以很容易的使用其高级特性。
+
+Python是一个灵活的编程语言，由于其注重简便性和代码的易读性，Python的学习曲线相对平缓，可以很好的用于编写一些简短代码。不过由于Python缩进式的代码风格，对于类C语言的使用者多少会影响其学习和使用。由于Python是一门更加通用的编程语言，其更多的优势在于编写网站和其他应用脚本。由于Python看重可读性和易用性，使得它的学习曲线相对比较低并且平缓。除了可以用于数据分析外，还可以帮助使用者快速高效的完成其他工作。
+
+---
+class:
+
+## 数据科学之战：R与Python
+
+.center[
+### 代码库和社区支持
+]
+
+R语言有一个庞大的扩展包库（CRAN，The Comprehensive R Archive Network），用户可自行贡献开源的扩展包供其他人员使用。R语言提供最早的发布版本为0.49（1997年4月23日），当时CRAN仅有3个镜像站点，仅提供12个包，仅编译了少量类Unix平台版本，Windows和Mac OS版本在该版尚未提供。截止到2016年8月，CRAN已有101个镜像站点，提供多达6631个包。CRAN库中的扩展包包含了大量的R工具和数据集，这使得我们可以快速的获取和使用最新的技术和功能而不必一切都从头开发。由于R起源和发展的特点，研究人员、数据科学家、统计学家和数量分析专家对R提供了更多的支持。使用者可以从邮件列表(Mailing Lists)、用户贡献的文档、以及Stackoverflow网站等地方获取大量的社区支持。
+
+Python也提供一个代码库（PyPi，Python Package Index），用户可以贡献自己的代码，不过相比CRAN而言，实践起来相对困难一些。不过单纯从统计分析角度而言，正如计算机科学教授Norm Matloff所言：Python并未建立起一个能与CRAN媲美的巨大的代码库，R在这方面领先巨大。
+
+---
+class:
+
+## 为什么选择R语言
+
+我想如下问题可以帮助你进行选择：
+
+1. 你要解决的问题是什么？
+2. 学习一门新语言的成本是多少？
+3. 在你的领域，常用的工具有哪些？
+4. 其他常用的工具又有哪些？他们和常用的工具又有什么关系？
+
+R：
+- 优点：一图胜千言，生态系统，统计的通用语言
+- 缺点：运行慢？陡峭的学习曲线
+
+Python：
+- 优点：IPython Notebook，通用语言，多用途语言
+- 缺点：可视化，不成熟
+
+???
+
+R
+
+优点
+
+一图胜千言
+
+通常，可视化的数据（图）要比原始数据本身更能高效简洁地进行信息展示。R语言丰富多样的可视化功能完全可以胜任此项工作。例如：R中的ggplot2，ggvis，googleVis，rCharts和plot.ly等扩展包提供了各式各样的绘图工具。
+
+生态系统
+
+R的生态系统是它的另一项优势，大量丰富开源的扩展包使得用户可以快速高效地进行数据分析。这些扩展包可以从CRAN，Bioconductor（生物信息学的开源软件）和GitHub（开源代码Git主机）等不同地方免费获取。R的用户社区也非常活跃，包括Meetup群组（一些由R用户社区的公司资助）、博客和社交网络等等。
+
+统计的通用语言
+
+R是由统计学家开发，同时也是为了统计学家开发的。统计学家们通过R代码和程序包交流思想和方法，即使是不会计算机编程语言的统计学家、工程师和科学家也会觉得R容易使用。R除了在学术界已经被广泛使用，其作为商业分析工具在工业界的采用率也在不断升高，R被应用在金融、药物、医学和市场等多个领域。
+
+缺点
+
+运行慢
+
+R运行慢，这是一个另R爱好者听到后很不舒服的一个问题。R的设计目的是使数据分析和统计分析变得容易，而不是为了让你的电脑“活得更轻松”。其实大量R代码运行慢的原因很简单，你的代码写的太差，所以，当R再运行慢时，一定是你“故意为之”，而非R的错。为改善这一点，你需要不断提供你的编码水平，同时R也提供了多种提供性能的方式和扩展包，例如：foreach（并行化编程）等。所以，“运行慢”到底是不是R的一个缺点，这完全取决于你。
+
+陡峭的学习曲线
+
+因为由统计学家开发，R另一个缺点是它陡峭的学习曲线。任何从使用界面化的分析工具（例如SPSS，SAS等）的用户都避免不了写代码，无形中增加了R语言学习的成本。同时，对于不熟悉R语言的用户，寻找合适的扩展包也会花费大量的时间。因此，为了克服这个问题，用户需要学习如何快速的在R活跃的社区中快速的找到问题的答案。
+
+Python
+
+优点
+
+IPython Notebook
+
+IPython Notebook最大的优点是使得用Python分析数据变得容易，它可以将分析流放在一个文件中，简化了使用Python进行数据分析的流程。IPython Notebook不仅可以与Python进行实时交互，还可以在其中提前录入文本，公式等说明信息，以及Python执行的结果。这使得我们可以更加便捷地和其他用户分享笔记本，同时在不进行交互操作的前提下，他们无需安装任何东西即可阅读笔记。
+
+由于IPython Notebook的多种优势，Jupyter实现了一种多后端的笔记本，不仅支持Python，同时支持R等其他语言，这使得Notebook的形式不再单单是Python的优点，而成为了多种分析语言的共同便捷之处。
+
+通用语言
+
+Python是一门通用语言，其另一个优点在于它的可读性和学习曲线。Python的语法类似英文一样，这就解释了为什么Python的学习曲线相对平缓。Python的测试框架可以确保代码的可重复性和可靠性。简单易用的测试框架（例如：UnitTest，Nose，DocTest，Pytest等）够支持Python代码一个很好的测试覆盖率。
+
+多用途语言
+
+相比R，Python是一个多用途语言。作为一个被大多数程序员所熟知且易于理解的编程语言，Python可以把具有不同背景的人汇集到一起。除了利用Python进行数据分析外，你还可以利用快速地构建其他工程，并可以很容易地将数据分析同这个工程结合起来使用。
+
+缺点
+
+可视化
+
+Python最大的问题在于其可视化，选择数据分析软件时，可视化功能是一个重要的评价指标。尽管Python中也有一些很好的可视化程序库，例如：Seaborn，Bokeh和Pygal，但是，相比与R，在Python中进行可视化会有些复杂，并且呈现的结果也并不是十分令人满意。
+
+不成熟
+
+Python另一个问题是它还不成熟，当然这仅仅是对于数据分析而言。截至目前，Python中没有模块能够代替R语言中100个重要的扩展包。
+
+所以回过头来，思考最开始提出的4个问题：
+
+Q1. 你要解决的问题是什么？
+
+Q2. 学习一门新语言的成本是多少？
+
+Q3. 在你的领域，常用的工具有哪些？
+
+Q4. 其他常用的工具又有哪些？他们和常用的工具又有什么关系？
+
+首先，我们从开源的角度将备选锁定在R和Python两者之中，这避免了不必要的版权问题。通过上述比较，R和Python最后的对比结果可以说是平局，那么R和Python那个更适合呢？本教程除了介绍数据分析中的统计，机器学习等相关知识外，还希望用户能够快速的上手实战。因此本教程从扩展包，可视化等多方面考虑，最终选取R作为使用的编程语言。
+
+---
+class: inverse, center, middle
+
+# 数据科学分工与流程
+
+---
+class:
+
+## 数据科学分工
+
+根据Donoho在**“数据科学50年”**<sup>[1]</sup>一文中的观点，将数据科学分为了6个部分，分别是：
+
+1. 数据探索和准备（Data Exploration and Preparation）
+2. 数据表示和转换（Data Representation and Transformation）
+3. 数据加工计算（Computing with Data）
+4. 数据建模（Data Modeling）
+5. 数据可视化和展现（Data Visualization and Presentation）
+6. 数据科学的科学性（Science about Data Science）
+
+.footnote[
+[1] D. Donoho, “50 years of data science,” 2015.
+]
+
+---
+class:
+
+## 数据分析和挖掘流程
+
+数据分析和挖掘是一个复杂的过程，在进行数据分析和挖掘工作的过程中，我们需要一个过程模型指导每一步工作。迄今为止，很多专家和学者提出了多种数据分析和挖掘的过程模型，下表显示了工业界数据分析和挖掘工作者近年来所采用的方法。
+
+.center[
+工业界数据分析和工作者采用的方法
+]
+
+| 年份/方法          | CRISP-DM | SEMMA | KDD Process | Other | None |
+| :--------          | :------- | :---- | :---------- | :---- | :--- |
+| 2002<sup>[1]</sup> | 51%      | 12%   | -           | 34%   | 4%   |
+| 2004<sup>[2]</sup> | 42%      | 10%   | -           | 40%   | 7%   |
+| 2007<sup>[3]</sup> | 41%      | 13%   | 7%          | 33%   | 5%   |
+
+.footnote[
+[1] http://www.kdnuggets.com/polls/2002/methodology.htm <br>
+[2] http://www.kdnuggets.com/polls/2004/data_mining_methodology.htm <br>
+[3] http://www.kdnuggets.com/polls/2007/data_mining_methodology.htm
+]
+
+---
+class:
+
+## 数据分析和挖掘流程
+
+.pull-left[
+**CRISP-DM**<sup>[1]</sup>全称为跨行业数据挖掘标准流程（Cross Industry Standard Process for Data Mining）Shearer于2000年提出。CRISP-DM对一个数据分析和挖掘项目的生命周期提供一个总体的描述。
+
+- 业务理解 (Business understanding)
+- 数据理解 (Data understanding)
+- 数据准备 (Data preparation)
+- 建模 (Modeling)
+- 评估 (Evaluation)
+- 部署 (Deployment)
+]
+
+.pull-right[
+![CRISM-DM-CYCLE](images/crisp-dm-cycle.svg)
+]
+
+.footnote[
+[1] C. Shearer, “Te crisp-dm model: the new blueprint for data mining,” Journal of data warehousing, vol. 5, no. 4, pp. 13–22, 2000
+]
+
+---
+class:
+
+## CRISP-DM
+
+![CRISP-DM](images/crisp-dm-process-tasks-and-output.svg)
+
+???
+
+CRISP-DM描述的过程模型包括6个阶段，每个阶段的大致描述如下：
+
+1. 业务理解（Business understanding）
+
+在最初阶段我们需要从业务的角度来理解项目的目标和需求，之后将这些知识转化成数据挖掘问题的定义和实现目标的最初规划。
+
+2. 数据理解（Data understanding）
+
+数据理解阶段包含了数据收集等一系列活动。数据准备能够帮助我们熟悉数据，了解数据质量和问题，对数据有初步认识以及发现有用的数据子集并形成对隐含信息的假设。
+
+3. 数据准备（Data preparation）
+
+数据准备阶段包含了利用原始数据构建最终数据集（用于建模的数据）的全部活动。数据准备工作很有可能会被执行多次并且不以任何特定的顺序进行。其任务既包括表、记录和属性的选择，也包括用于建模的数据转换和清洗。
+
+4. 建模（Modeling）
+
+在建模阶段，我们会选取和应用多种建模技术，并对其参数进行调优。一般而言，相同类型的数据挖掘问题有多种建模技术。默写技术有特定数据形式的需求，因此必要的时候我们通常会返回数据准备阶段。
+
+5. 评估（Evaluation）
+
+在评估阶段，我们已经建立了一个（或多个）从数据分析角度看似高质量的模型。但在最终部署之前，还有很多重要的事情要做，包括：全面评价模型，重审构建模型的每个步骤确保模型能够真正到达业务目的。另一个关键目标是判断是够有重要的业务问题没有被充分考虑。在这个阶段的最后，我们还应该确定使用数据挖掘结果应该得到什么样的决策。
+
+6. 部署（Deployment）
+
+模型的建立并不意味着项目的结束。尽管模型的目的是为了增加数据的知识性，但是获取的知识应该被组织和表示成用户可以使用的形式。这通常与包含能够支持公司决策的“现场”模型（"live" model）的应用相关，例如：实时的Web页面展现或是营销数据的重复scoring。基于这些需求，部署阶段既可以简单的生成一份报告，亦可以复杂的实现一个覆盖整个企业可重复的数据挖掘过程。大多数情况下是由客户而不是数据分析师来完成部署阶段。但是，既然分析师不需要完成部署工作，那么理解前端需要完成那些活动以实实在在的利用建立好的模型对用户而言就至关重要了。
+
+---
+class: center, middle
+
+# Thanks
+
+![CC BY-NC-SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+本作品采用 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可

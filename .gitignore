@@ -1,9 +1,16 @@
+# R
 .Rhistory
 .Rproj.user
 .RData
+
+# vscode
 .vscode
+
+# system
 .DS_Store
 *.log
 *.dump
-/*/Slides
 
+# slides source
+/*/Slides/*
+!/*/Slides/*.Rmd
