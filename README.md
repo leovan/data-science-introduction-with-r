@@ -1,4 +1,4 @@
-# Data Science Introduction With R <img src="docs/images/data-science-with-r.png" align="right" alt="logo" height = "100" style = "border: none; float: right;">
+# Data Science Introduction with R <img src="docs/images/data-science-with-r.png" align="right" alt="logo" height = "100" style = "border: none; float: right;">
 
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
 ![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-r.svg)
@@ -17,7 +17,7 @@
      - Scripts: 代码脚本目录，包含本节所需的代码脚本
    - 幻灯片: 一级目录下的PDF文件即为本节课程的幻灯片
    - docs 目录: 包含配置手册等其他资料
-4. 本项目遵守 [**CC BY-NC-SA 4.0**](http://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
+4. 本项目遵守 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
 
 ## 准备 - Preparation
 
