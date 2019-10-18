@@ -67,7 +67,7 @@ class:
 6. **（20%）理论**：包括数据科学的基础；模型方法，数据计算，教学和工具评估的基本方法；模型方法，数据计算，教学和评估的数学调查。
 
 .footnote[
-[1] W. S. Cleveland, “Data science: an action plan for expanding the technical areas of the feld of statistics,”International statistical review, vol. 69, no. 1, pp. 21–26, 2001.
+[1] W. S. Cleveland, “Data science: an action plan for expanding the technical areas of the field of statistics,” International statistical review, vol. 69, no. 1, pp. 21–26, 2001.
 ]
 
 ---
