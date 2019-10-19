@@ -10,9 +10,9 @@
 
 4. 安装Git，便于更新Git仓库，安装相关选项如图所示，其他选项默认即可：
 
-   ![git-installation-path](git-installation-path.png)
+   ![git-installation-path](images/git-installation-path.png)
 
-   ![git-installation-options](git-installation-options.png)
+   ![git-installation-options](images/git-installation-options.png)
 
 5. Git相关操作详见[在线教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)。
 
@@ -22,7 +22,7 @@
 
 2. 将R安装在${SDK}目录中，R的安装根目录我们定义为${R_ROOT}，相关选项如图所示：
 
-   ![microsoft-r-open-installation-path](microsoft-r-open-installation-path.png)
+   ![microsoft-r-open-installation-path](images/microsoft-r-open-installation-path.png)
 
 3. 打开${R_ROOT}/etc目录，使用文本编辑器打开Rprofile.site文件，找到如下代码位置：
 
@@ -45,7 +45,7 @@
 
 2. 将RStudio安装在${SDK}目录中，相关选项如图：
 
-   ![rstudio-installation-path](rstudio-installation-path.png)
+   ![rstudio-installation-path](images/rstudio-installation-path.png)
 
 3. 安装完毕后打开，从菜单栏依次单击 Tools -> Global Options...打开配置对话框。
 
@@ -61,9 +61,9 @@
 
 2. 将Anaconda Python 3.6安装在${SDK}目录中，Anaconda3的安装根目录我们定义为${ANACONDA3_ROOT}，相关选项如图：
 
-   ![miniconda3-installation-path](anaconda3-installation-path.png)
+   ![miniconda3-installation-path](images/anaconda3-installation-path.png)
 
-   ![miniconda3-installation-options](anaconda3-installation-options.png)
+   ![miniconda3-installation-options](images/anaconda3-installation-options.png)
 
 3. 启动命令提示符，键入如下命令更换conda源：
 
