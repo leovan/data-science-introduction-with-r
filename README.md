@@ -2,13 +2,14 @@
 
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
 ![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-r.svg)
+[![Netlify Status](https://img.shields.io/netlify/22768c1a-8369-4035-b090-0cd0a0ad39af)](https://app.netlify.com/sites/ds-r/deploys)
 
 ---
 
 ## 简介 - Introduction
 
 1. 本项目是一套以 R 为分析语言的数据科学入门教程。
-2. Github 地址: https://github.com/leovan/data-science-introduction-with-r
+2. 网站: https://ds-r.leovan.tech
 3. Git 仓库目录结构:
    - 一级目录为一个专题
    - 二级目录:
@@ -26,8 +27,7 @@
 3. RStudio: 最新 Preview 版本 ([下载地址](https://www.rstudio.com/products/rstudio/download/preview/)，Preview 版本有些新特性比较实用)
 4. Visual Studio Code: 最新版本 ([下载地址](https://code.visualstudio.com/)，用于代码浏览和编辑)
 5. Python: 最新版本Anaconda Python 3 ([下载地址](https://www.anaconda.com/download/)，用于 Jupyter 基础环境)
-6. nteract: 最新版本 ([下载地址](https://nteract.io/)，用于 Notebook 浏览和编辑)
-7. Typora: 最新版本 ([下载地址](http://typora.io)，用于 Markdown 浏览)
+6. Typora: 最新版本 ([下载地址](http://typora.io)，用于 Markdown 浏览)
 
 ## 数据科学简介 - Data Science Introduction
 
