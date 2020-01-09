@@ -561,7 +561,8 @@ $\epsilon$为随机误差分量。对于一元线性回归，数据需要满足�
 1. 
 $\epsilon$服从正态分布。
 2. 
-$\epsilon$概率分布的均值为$0$，即
+$\epsilon$概率分布的均值为
+$0$，即
 $E(\epsilon) =  0$，其中
 $E(\epsilon)$表示
 $\epsilon$的期望。
@@ -682,7 +683,7 @@ $I()$ 表示将表达式转化成为一个新的自变量。例如：
 $y \sim x_1 + I\left(\left(x_2 + x_3\right) ^ 2\right)$表示将
 $\left(x_2 + x_3\right) ^ 2$转化成为一个变量
 $x_new$，并存在关系
-$y \sim x_1 + x_new$
+$y \sim x_1 + x_{new}$
 -	
 $\textit{function}$ 表示可用的数学函数。例如：
 $y \sim x_1 + log\left(x_2\right)$表示
