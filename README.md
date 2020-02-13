@@ -1,4 +1,4 @@
-# Data Science Introduction with R <img src="docs/images/data-science-with-r.png" align="right" alt="logo" height = "100" style = "border: none; float: right;">
+# Data Science Introduction with R <img src="docs/images/web/data-science-introduction-with-r.png" align="right" alt="logo" height = "100" style = "border: none; float: right;">
 
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](LICENSE)
 ![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-r.svg)
