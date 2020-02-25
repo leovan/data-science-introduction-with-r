@@ -29,6 +29,7 @@
 4. Visual Studio Code: 最新版本 ([下载地址](https://code.visualstudio.com/)，用于代码浏览和编辑)
 5. Python: 最新版本Anaconda Python 3 ([下载地址](https://www.anaconda.com/download/)，用于 Jupyter 基础环境)
 6. Typora: 最新版本 ([下载地址](http://typora.io)，用于 Markdown 浏览)
+7. nteract: 最新版本 ([下载地址](https://nteract.io/)，Jupyter Notebook 桌面客户端)
 
 ## 数据科学简介 - Data Science Introduction
 
@@ -103,12 +104,12 @@
    - 偏差和方差
 3. 超参数优化
 
-## 分类算法 (上) - Classification Algorithms Part 1
+## 分类算法 (上) - Classification Algorithms - Part 1
 
 1. 逻辑回归
 2. 决策树
 
-## 分类算法 (下) - Classification Algorithms Part 2
+## 分类算法 (下) - Classification Algorithms - Part 2
 
 1. Bagging
 2. Boosting
