@@ -210,7 +210,7 @@ class:
 .pull-left[
 ROC（Receiver Operation Characteristic，接收者操作特征）曲线，首先是由二战中的电子工程师和雷达工程师发明的，用来侦测战场上的敌军载具，后来逐渐被用于医学、无线电、生物学、犯罪心理学以及数据挖掘和机器学习领域。类似P-R曲线，但ROC曲线的横轴为“假正例率”（False Positive Rate， FPR），纵轴为“真正例率”（True Positive Rate，TPR）：
 
-$$\text{TPR} = \dfrac{\text{TP}}{\text{TP} + \text{FN}}, \text{FRP} = \dfrac{\text{FP}}{\text{TN} + \text{FP}}$$
+$$\text{TPR} = \dfrac{\text{TP}}{\text{TP} + \text{FN}}, \text{FPR} = \dfrac{\text{FP}}{\text{TN} + \text{FP}}$$
 ]
 
 .pull-right[
