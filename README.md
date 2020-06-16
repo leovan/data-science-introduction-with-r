@@ -27,7 +27,7 @@
 2. R: Microsoft R Open 最新版本 ([下载地址](https://mran.microsoft.com/download/)，容易配置安装，自带 MKL 矩阵运算加速)
 3. RStudio: 最新 Preview 版本 ([下载地址](https://www.rstudio.com/products/rstudio/download/preview/)，Preview 版本有些新特性比较实用)
 4. Visual Studio Code: 最新版本 ([下载地址](https://code.visualstudio.com/)，用于代码浏览和编辑)
-5. Python: 最新版本Anaconda Python 3 ([下载地址](https://www.anaconda.com/download/)，用于 Jupyter 基础环境)
+5. Python: 最新版本 Anaconda Python 3 ([下载地址](https://www.anaconda.com/download/)，用于 Jupyter 基础环境)
 6. Typora: 最新版本 ([下载地址](http://typora.io)，用于 Markdown 浏览)
 7. nteract: 最新版本 ([下载地址](https://nteract.io/)，Jupyter Notebook 桌面客户端)
 
