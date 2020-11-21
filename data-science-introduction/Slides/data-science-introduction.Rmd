@@ -84,7 +84,7 @@ class:
 .footnote[
 [1] N. S. Board, “Long-lived digital data collections enabling research and education in the 21st century.”http://www.nsf.gov/pubs/2005/nsb0540/, 2005.
 
-[2]  T. H. Davenport and D. Patil, “Data scientist: Te sexiest job of the 21st century,” Harvard Business Review Magazine: http://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-Century/ar/1, 2012.
+[2] T. H. Davenport and D. Patil, “Data Scientist: The Sexiest Job of the 21st Century,” Harvard Business Review Magazine:  https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century, 2012.
 ]
 
 ???
