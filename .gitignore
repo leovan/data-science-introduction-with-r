@@ -6,12 +6,23 @@
 # vscode
 .vscode
 
+# Python
+.ipynb_checkpoints
+
 # system
 .DS_Store
 *.log
 *.dump
 
-# slides source
-/*/Slides/*
-!/*/Slides/*.Rmd
-!/*/Slides/images/
+# base
+base/fonts
+
+# slide source
+/*/slide/*_cache
+/*/slide/*_files
+/*/slide/libs
+/*/slide/generated
+/*/slide/*.html
+
+# others
+*.h5
