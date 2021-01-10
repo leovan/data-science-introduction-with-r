@@ -1,0 +1,34 @@
+\documentclass[tikz, convert={density=300,size=100x,outext=.png}]{standalone}
+\usetikzlibrary{arrows}
+\begin{document}
+\tikzstyle{input}=[circle,draw=green!50,fill=green!20,thick,minimum size=6mm]
+\tikzstyle{output}=[circle,draw=blue!50,fill=blue!20,thick,minimum size=6mm]
+\tikzstyle{hidden}=[rectangle,draw=red!50,fill=red!20,thick,minimum size=6mm]
+\tikzstyle{transition}=[thick,draw=black!75,fill=black!20]
+\tikzstyle{pre}=[<-,shorten <=1pt,>=stealth',semithick]
+\tikzstyle{post}=[->,shorten >=1pt,>=stealth',semithick]
+\begin{tikzpicture}[node distance=1.2cm, auto]
+    \node [output]  (o1)                                 {};
+    \node [hidden]  (h21)  [below of=o1, xshift=-10mm]   {}
+        edge [post] (o1);
+    \node [hidden]  (h22)  [below of=o1, xshift=+10mm]   {}
+        edge [post] (o1);
+    \node [hidden]  (h11)  [below of=h21, xshift=-10mm]  {}
+        edge [post] (h21)
+        edge [post] (h22);
+    \node [hidden]  (h12)  [below of=h21, xshift=+10mm]  {}
+        edge [post] (h21)
+        edge [post] (h22);
+    \node [hidden]  (h13)  [below of=h22, xshift=+10mm]  {}
+        edge [post] (h21)
+        edge [post] (h22);
+    \node [input]  (i2)  [below of=h12, xshift=-10mm]    {}
+        edge [post] (h11)
+        edge [post] (h12)
+        edge [post] (h13);
+    \node [input]  (i2)  [below of=h12, xshift=+10mm]    {}
+        edge [post] (h11)
+        edge [post] (h12)
+        edge [post] (h13);
+\end{tikzpicture}
+\end{document}

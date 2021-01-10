@@ -1,0 +1,23 @@
+\documentclass[tikz, convert={density=300,size=100x,outext=.png}]{standalone}
+\usetikzlibrary{arrows}
+\begin{document}
+\tikzstyle{input}=[circle,draw=green!50,fill=green!20,thick,minimum size=6mm]
+\tikzstyle{output}=[circle,draw=blue!50,fill=blue!20,thick,minimum size=6mm]
+\tikzstyle{hidden}=[rectangle,draw=red!50,fill=red!20,thick,minimum size=6mm]
+\tikzstyle{transition}=[thick,draw=black!75,fill=black!20]
+\tikzstyle{pre}=[<-,shorten <=1pt,>=stealth',semithick]
+\tikzstyle{post}=[->,shorten >=1pt,>=stealth',semithick]
+\begin{tikzpicture}[node distance=1.2cm, auto]
+    \node [output]  (o1)                               {};
+    \node [hidden]  (h1)  [below of=o1, xshift=-10mm]  {}
+        edge [post] (o1);
+    \node [hidden]  (h2)  [below of=o1, xshift=+10mm]  {}
+        edge [post] (o1);
+    \node [input]  (i2)  [below of=h1]                 {}
+        edge [post] (h1)
+        edge [post] (h2);
+    \node [input]  (i2)  [below of=h2]                 {}
+        edge [post] (h1)
+        edge [post] (h2);
+\end{tikzpicture}
+\end{document}

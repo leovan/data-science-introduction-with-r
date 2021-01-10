@@ -1,0 +1,8 @@
+\documentclass[tikz, convert={density=300,size=100x,outext=.png}]{standalone}
+\begin{document}
+\begin{tikzpicture}
+    \fill [white] (0, 0) rectangle (4, 4);
+    \fill [black] (0, 0) -- (0, 4) -- (2, 4) -- (1, 2.5) -- (1.5, 1.5) -- (4, 0) -- cycle;
+    \draw [black] (0, 0) rectangle (4, 4);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[tikz, convert={density=300,size=x400,outext=.png}]{standalone}
+\usepackage[adobefonts]{ctex}
+\usetikzlibrary{arrows}
+\tikzstyle{input}=[circle,draw=green!50,fill=green!20,thick,minimum size=6mm]
+\tikzstyle{output}=[circle,draw=blue!50,fill=blue!20,thick,minimum size=6mm]
+\tikzstyle{blank}=[circle,thick,minimum size=6mm,font=\footnotesize]
+\tikzstyle{hidden}=[rectangle,draw=red!50,fill=red!20,thick,minimum size=6mm]
+\tikzstyle{transition}=[thick,draw=black!75,fill=black!20]
+\tikzstyle{pre}=[<-,shorten <=1pt,>=stealth',semithick]
+\tikzstyle{post}=[->,shorten >=1pt,>=stealth',semithick]
+\begin{document}
+\begin{tikzpicture}[node distance=1cm, auto]
+    \node [blank]  (il1)                  {$x_1$};
+    \node [blank]  (il2) [below of=il1]   {$x_2$};
+    \node [blank]  (il3) [below of=il2]   {...};
+    \node [blank]  (il4) [below of=il3]   {$x_n$};
+    
+    \node [input]  (i1)  [right of=il1]   {}
+    edge [pre] (il1);
+    \node [input]  (i2)  [right of=il2]   {}
+    edge [pre] (il2);
+    \node [blank]  (i3)  [right of=il3]   {...};
+    \node [input]  (i4)  [right of=il4]   {}
+    edge [pre] (il4);
+    \node [blank]  (iname)  [below of=i4]   {输入层};
+    
+    \node [hidden] (h11) [right of=i1]   {}
+    edge [pre] (i1)
+    edge [pre] (i2)
+    edge [pre] (i4);
+    \node [hidden] (h12) [right of=i2]   {}
+    edge [pre] (i1)
+    edge [pre] (i2)
+    edge [pre] (i4);
+    \node [blank]  (h13) [right of=i3]   {...};
+    \node [hidden] (h14) [right of=i4]   {}
+    edge [pre] (i1)
+    edge [pre] (i2)
+    edge [pre] (i4);
+    
+    \node [hidden] (h21) [right of=h11]  {}
+    edge [pre] (h11)
+    edge [pre] (h12)
+    edge [pre] (h14);
+    \node [hidden] (h22) [right of=h12]  {}
+    edge [pre] (h11)
+    edge [pre] (h12)
+    edge [pre] (h14);
+    \node [blank]  (h23) [right of=h13]  {...};
+    \node [hidden] (h24) [right of=h14]  {}
+    edge [pre] (h11)
+    edge [pre] (h12)
+    edge [pre] (h14);
+    \node [blank]  (hname)  [below of=h24]   {隐含层};
+    
+    \node [blank]  (h31) [right of=h21]  {...}
+    edge [pre] (h21);
+    \node [blank]  (h32) [right of=h22]  {...}
+    edge [pre] (h22);
+    \node [blank]  (h33) [right of=h23]  {...};
+    \node [blank]  (h34) [right of=h24]  {...}
+    edge [pre] (h24);
+    
+    \node [output] (o1)  [right of=h31]  {}
+    edge [pre] (h31);
+    \node [output] (o2)  [right of=h32]  {}
+    edge [pre] (h32);
+    \node [blank]  (o3)  [right of=h33]  {...};
+    \node [output] (o4)  [right of=h34]  {}
+    edge [pre] (h34);
+    \node [blank]  (oname)  [below of=o4]   {输出层};
+    
+    \node [blank]  (ol1) [right of=o1]  {$o_1$}
+    edge [pre] (o1);
+    \node [blank]  (ol2) [right of=o2]  {$o_2$}
+    edge [pre] (o2);
+    \node [blank]  (ol3) [right of=o3]  {...};
+    \node [blank]  (ol4) [right of=o4]  {$o_n$}
+    edge [pre] (o4);
+\end{tikzpicture}
+\end{document}

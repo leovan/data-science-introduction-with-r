@@ -1,4 +1,0 @@
-names	gender	age
-Leo	Male	26
-Tom	Male	24
-Jacy	Female	25

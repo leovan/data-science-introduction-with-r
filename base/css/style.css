@@ -1,0 +1,274 @@
+@font-face {
+  font-family: Alegreya;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alegreya'), local('Alegreya-Regular'), url(../fonts/alegreya-regular.woff2) format('woff2'), url(../fonts/alegreya-regular.woff) format('woff')
+}
+
+@font-face {
+  font-family: Alegreya;
+  font-style: italic;
+  font-weight: 400;
+  src:local('Alegreya Italic'), local('Alegreya-Italic'), url(../fonts/alegreya-italic.woff2) format('woff2'), url(../fonts/alegreya-italic.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Mono'), local('PTMono-Regular'), url(../fonts/pt-mono-regular.woff2) format('woff2'), url(../fonts/pt-mono-regular.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../fonts/source-sans-pro-regular.woff2) format('woff2'), url(../fonts/source-sans-pro-regular.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url('../fonts/yanone-kaffeesatz.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/droid-serif.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url('../fonts/source-code-pro.woff') format('woff');
+}
+
+body {
+  font-family: "Linux Libertine", Georgia, "Liberation Serif", "Noto Serif CJK SC", "Noto Serif CJK TC", "Source Han Serif SC", "Source Han Serif CN", source-han-serif-sc, "Source Han Serif TC", "Source Han Serif TW", source-han-serif-tc, "Source Han Serif", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yanone Kaffeesatz', 'Palatino Linotype', 'Book Antiqua', Palatino, "Noto Serif CJK SC", "Noto Serif CJK TC", "Source Han Serif SC", "Source Han Serif CN", source-han-serif-sc, "Source Han Serif TC", "Source Han Serif TW", source-han-serif-tc, "Source Han Serif", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  font-weight: bold;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: Iosevka, "Sarasa Mono SC", "Sarasa Mono TC", Consolas, "Lucida Console", Menlo, Monaco, "Andale Mono", "Ubuntu Mono", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", monospace;
+}
+
+.caption, tfoot {
+  font-family: "Linux Libertine", Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  font-size: 0.9em;
+}
+
+.logo {
+  background-image: url(../assets/avatar.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 66px;
+  right: 80px;
+  width: 66px;
+  height: 66px;
+  z-index: 0;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 90%;
+}
+
+/* 去掉页码 */
+.title-slide .remark-slide-number, .content .remark-slide-number, .section .remark-slide-number, .thanks .remark-slide-number {
+  display: none;
+}
+
+/* 首页 */
+.title-slide {
+  background: url("../assets/slide-cover-background.png");
+  background-size: 100% 100%;
+  background-color: #fff;
+}
+
+.title-slide h1, .title-slide h2, .title-slide h3 {
+  color: #000;
+  line-height: 0.6em;
+}
+
+.title-slide h1 {
+  margin-top: 200px;
+}
+
+/* 目录页 */
+.content-page {
+  margin: 100px 100px auto 100px;
+}
+
+.content-page-title {
+  font-size: 40pt;
+  font-weight: bold;
+}
+
+.content-page-list {
+  font-size: 20pt;
+  height: 40pt;
+  line-height: 40pt;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+
+/* 表格 */
+table {
+  margin: auto;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  border-spacing: 6px 6px;
+  border-collapse: separate;
+}
+
+th {
+  border-bottom: none;
+}
+
+thead, tfoot, tr:nth-child(even) {
+  background: #eee
+}
+
+th, td {
+  padding: 5px;
+}
+
+/* 两栏布局 */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+
+.pull-right {
+  float: right;
+  width: 47%;
+}
+
+.pull-right ~ * {
+  clear: both;
+}
+
+/* Grid 布局 */
+.grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-cell {
+  flex: 1;
+}
+
+.grid-cell-full {
+  flex: 0 0 100%;
+}
+
+.grid-cell-1of2 {
+  flex: 0 0 calc((100% / 2) - 1rem);
+}
+
+.grid-cell-1of3 {
+  flex: 0 0 calc((100% / 3) - 1rem);
+}
+
+.grid-cell-2of3 {
+  flex: 0 0 calc((100% / 3 * 2) - 1rem);
+}
+
+.grid-cell-1of4 {
+  flex: 0 0 calc((100% / 4) - 1rem);
+}
+
+.grid-cell-1of5 {
+  flex: 0 0 calc((100% / 5) - 1rem);
+}
+
+.grid-cell-1of10 {
+  flex: 0 0 calc((100% / 10) - 1rem);
+}
+
+.v-middle {
+  vertical-align: middle;
+}
+
+.code-good pre:before, .code-bad pre:before {
+  display: block;
+  float: left;
+  width: 1em;
+  height: 1em;
+  margin: 10px 6px auto;
+}
+
+.code-good pre:before {
+  content: url(../assets/code-good.svg);
+}
+
+.code-bad pre:before {
+  content: url(../assets/code-bad.svg);
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+a, a > code {
+  color: #775695;
+  text-decoration: none;
+}
+
+.remark-code-line {
+  line-break: anywhere;
+}
+
+/* 打印样式
+16:9 size: 1210px 681px;
+4:3 size: 908px 681px;
+*/
+@page {
+  size: 1210px 681px;;
+  margin: 0;
+}
+
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
