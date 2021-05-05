@@ -3,7 +3,6 @@
 ![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-r.svg)
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
 ![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-r.svg)
-![Netlify Status](https://img.shields.io/netlify/22768c1a-8369-4035-b090-0cd0a0ad39af)
 
 ---
 
