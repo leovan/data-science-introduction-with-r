@@ -1,0 +1,25 @@
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+
+<meta name="referrer" content="no-referrer">
+
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta name="description" property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+
+<meta name="author" property="article:author" content="{{ .Site.Params.author }}">
+
+{{ if .Keywords }}
+<meta name="keywords" property="article:tag" content ="{{ delimit .Keywords "," }}">
+{{ else if .Params.tags }}
+<meta name="keywords" property="article:tag" content ="{{ delimit .Params.tags "," }}">
+{{ end }}
+
+<link rel="icon" type="image/png" sizes="16x16" href="/images/web/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/web/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/images/web/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/images/web/favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/web/favicon-192x192.png">
+<link rel="apple-touch-icon" size="192x192" href="/images/web/icon-192x192.png">
+<link rel="manifest" href="/manifest.json">

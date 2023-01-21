@@ -1,0 +1,52 @@
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Section | absURL | jsonify | safeJS }}
+  },
+  "name": {{ .Title | jsonify | safeJS }},
+  "headline": {{ .Title | jsonify | safeJS }},
+  "description" : {{ if .Description }}{{ .Description | jsonify | safeJS }}{{ else if .IsPage }}{{ .Summary | jsonify | safeJS }}{{ end }},
+  "genre": [
+    {{ range $i, $e := .Params.categories }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}
+  ],
+  "wordCount": "{{ .WordCount }}",
+  "keywords": [
+    {{ if .Keywords }}{{ range $i, $e := .Keywords }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}{{ else if .Params.tags }}{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e | jsonify | safeJS }}{{ end }}{{ end }}
+  ],
+  "image": [
+    {{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ $e | absURL | jsonify | safeJS }}{{ end }}
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "{{ (or .Params.author .Site.Params.author) }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ (or .Params.author .Site.Params.author) }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ "/images/web/publisher-logo.png" | absURL | jsonify | safeJS }}
+    }
+  },
+  "url": {{ .Permalink | absURL | jsonify | safeJS }}
+}
+</script>
+{{ else }}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "{{ if .IsHome }}WebSite{{ else }}WebPage{{ end }}",
+  "name": {{ printf "%s - %s" .Title .Site.Title | jsonify | safeJS }},
+  "description": {{ printf "%s - %s" .Title .Site.Params.description | jsonify | safeJS }},
+  "author": {
+    "@type": "Person",
+    "name": "{{ (or .Params.author .Site.Params.author) }}"
+  },
+  "url": {{ .Permalink | absURL | jsonify | safeJS }}
+}
+</script>
+{{ end }}

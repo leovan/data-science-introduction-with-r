@@ -1,0 +1,35 @@
+{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ with .Site.Params.googleAdsense }}
+<ins
+  class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="{{ . }}"
+  data-ad-slot=""></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{{ end }}
+{{ end }}
+
+{{ partial "footer_prismjs.html" . }}
+
+<script async src="/js/fix-toc.js"></script>
+<script async src="/js/center-img.js"></script>
+<script async src="/js/right-quote.js"></script>
+<script async src="/js/fix-footnote.js"></script>
+<script async src="/js/external-link.js"></script>
+<script async src="/js/alt-title.js"></script>
+<script src="/js/no-highlight.js"></script>
+<script src="/js/math-code.js"></script>
+<script src="/js/toggle-theme.js"></script>
+
+<script src="{{ .Site.Params.lazysizesCDN }}/lazysizes/{{ .Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+
+<script src="{{ .Site.Params.vanillaBackToTopCDN }}/vanilla-back-to-top@{{ .Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
+<script>
+addBackToTop({
+  diameter: 48
+})
+</script>

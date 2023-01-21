@@ -1,0 +1,54 @@
+{{ partial "header.html" . }}
+
+<article class="main">
+  <div class="post-single">
+    <div class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <div class="post-description">
+        <p>{{ .Params.description | markdownify }}</p>
+      </div>
+      <div class="post-tags">
+        {{ range $tag := .Params.tags }}
+        <span class="post-tag">{{ $tag }}</span>
+        {{ end }}
+      </div>
+    </div>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+    {{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+    <ins class="post-adsbygoodle adsbygoogle"
+      style="display:block"
+      data-ad-client="{{ .Site.GoogleAnalytics }}"
+      data-ad-slot="5366503013"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    {{ end }}
+    <div class="post-footer">
+      {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{ if and (gt (len $pages) 1) (in $pages . ) }}
+      <nav class="post-footer-nav">
+        {{ with $pages.Next . }}
+        <a class="prev" href="{{ .RelPermalink }}">
+          <span class="title">« 上一页</span>
+          <br>
+          <span>{{- .Name -}}</span>
+        </a>
+        {{ end }}
+        {{ with $pages.Prev . }}
+        <a class="next" href="{{ .RelPermalink }}">
+          <span class="title">下一页 »</span>
+          <br>
+          <span>{{- .Name -}}</span>
+        </a>
+        {{ end }}
+      </nav>
+      {{ end }}
+    </div>
+  </div>
+</article>
+
+{{ partial "footer.html" . }}

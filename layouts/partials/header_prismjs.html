@@ -1,0 +1,8 @@
+{{ if and (not .Params.disable_highlight) (in (string .Content) "</pre>") }}
+{{ $prismjsVersion := .Site.Params.prismjsVersion }}
+{{ $prismjsCDN := .Site.Params.prismjsCDN }}
+<link rel="stylesheet" type="text/css" href="{{ $prismjsCDN }}/prism/{{ .Site.Params.prismjsVersion }}/themes/prism.min.css">
+{{ range .Site.Params.prismjsPluginCSS }}
+<link rel="stylesheet" type="text/css" href="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.css">
+{{ end }}
+{{ end }}

@@ -1,0 +1,93 @@
+baseURL: "https://ds-r.leovan.tech/"
+languageCode: "zh-cn"
+title: "R 语言数据科学导论 | Data Science Introduction with R"
+googleAnalytics: "G-MCPZ7NTLEX"
+ignoreFiles: [
+  "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
+  "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$",
+  "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
+hasCJKLanguage: true
+enableEmoji: true
+rssLimit: 100
+
+disableKinds: ["taxonomy", "term"]
+
+permalinks:
+  lecture: "/lecture/:slug/"
+  doc: "/doc/:slug/"
+
+menu:
+  main:
+    - name: "讲义"
+      url: "/lecture/"
+      weight: 1
+    - name: "文档"
+      url: "/doc/"
+      weight: 2
+    - name: "关于"
+      url: "/about/"
+      weight: 3
+
+params:
+  title: "R 语言数据科学导论"
+  subtitle: "Data Science Introduction with R"
+  author: "范叶亮 | Leo Van"
+  description: "R 语言数据科学导论 | Data Science Introduction with R"
+  logo: "/images/data-science-introduction-with-r.png"
+  logoWidth: 150
+  footer: "Copyright &copy; 2017-{Year} [范叶亮 | Leo Van](https://leovan.me)"
+  licenseURL: "https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE"
+  googleAdsense: "ca-pub-2608165017777396"
+
+  socialIcons:
+    - title: "版本"
+      icon: "https://img.shields.io/github/release/leovan/data-science-introduction-with-r.svg"
+    - title: "许可证"
+      icon: "https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg"
+    - title: "Github Stars"
+      icon: "https://img.shields.io/github/stars/leovan/data-science-introduction-with-r?style=social"
+      url: "https://github.com/leovan/data-science-introduction-with-r"
+  buttons:
+    - title: "讲义"
+      url: "/lecture/"
+    - title: "文档"
+      url: "/doc/"
+    - title: "关于"
+      url: "/about/"
+
+  jsCookieVersion: "3.0.0"
+  jsCookieCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  clipboardjsVersion: "2.0.11"
+  clipboardjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  prismjsVersion: "1.29.0"
+  prismjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
+  prismjsPluginJS: ["autoloader", "show-language", "toolbar"]
+  prismjsPluginCSS: ["toolbar"]
+
+  mathjaxVersion: "3.2.2"
+  mathjaxCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  jQueryVersion: "3.6.3"
+  jQueryCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  lazysizesVersion: "5.3.2"
+  lazysizesCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+  vanillaBackToTopVersion: "latest"
+  vanillaBackToTopCDN: "//cdn.jsdelivr.net/npm"
+
+  pdfjsVersion: "3.2.146"
+  pdfjsCDN: "//cdnjs.cloudflare.com/ajax/libs"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      autoHeadingIDType: blackfriday
+  tableOfContents:
+    startLevel: 1

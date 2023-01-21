@@ -1,0 +1,139 @@
+{{ $pdfjsVersion := .Site.Params.pdfjsVersion }}
+{{ $pdfjsCDN := .Site.Params.pdfjsCDN }}
+{{ if not ($.Page.Scratch.Get "pdfjs-loaded") }}
+  {{ $.Page.Scratch.Set "pdfjs-loaded" 1 }}
+  <link rel="stylesheet" type="text/css" href="/css/pdf-viewer.css">
+  <link rel="stylesheet" type="text/css" href="{{ $pdfjsCDN }}/pdf.js/{{ $pdfjsVersion }}/pdf_viewer.min.css">
+  <script src="{{ $pdfjsCDN }}/pdf.js/{{ $pdfjsVersion }}/pdf.min.js"></script>
+{{ end }}
+
+{{ if not ($.Page.Scratch.Get "pdf-viewer-index") }}
+  {{ $.Page.Scratch.Set "pdf-viewer-index" 1 }}
+{{ else }}
+  {{ $.Page.Scratch.Set "pdf-viewer-index" (add ($.Page.Scratch.Get "pdf-viewer-index") 1) }}
+{{ end }}
+
+{{ $pdf_viewer_index := $.Page.Scratch.Get "pdf-viewer-index" }}
+{{ $url := .Get "url" }}
+{{ $page := .Get "page" | default 1 }}
+{{ $title := .Get "title" }}
+
+<div class="pdf-viewer-container" id="pdf-viewer-container-{{ $pdf_viewer_index }}">
+  <div class="pdf-viewer-canvas-container" id="pdf-viewer-canvas-container-{{ $pdf_viewer_index }}">
+    <div class="pdf-viewer-loading-wrapper" id="pdf-viewer-loading-wrapper-{{ $pdf_viewer_index }}">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="pdf-viewer-loading" id="pdf-viewer-loading-{{ $pdf_viewer_index }}" width="64px" height="64px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <path fill="none" stroke="currentColor" stroke-width="8" stroke-dasharray="153.95335693359377 102.63557128906248" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round" style="transform:scale(1);transform-origin:50px 50px">
+          <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="1.25s" keyTimes="0;1" values="0;256.58892822265625"></animate>
+        </path>
+      </svg>
+    </div>
+    <canvas class="pdf-viewer-canvas" id="pdf-viewer-canvas-{{ $pdf_viewer_index }}"></canvas>
+  </div>
+  <div class="pdf-viewer-controls-container" id="pdf-viewer-controls-container-{{ $pdf_viewer_index }}">
+    <div class="pdf-viewer-controls-left">
+      <span class="pdf-viewer-title" id="pdf-viewer-title-{{ $pdf_viewer_index }}">{{ $title }}</span>
+    </div>
+    <div class="pdf-viewer-controls-center">
+      <svg class="pdf-viewer-button pdf-viewer-button-prev-page" id="pdf-viewer-button-prev-page-{{ $pdf_viewer_index }}" viewBox="0 0 24 24"><path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" /></svg>
+      <span class="pdf-viewer-page-num">
+        <span id="pdf-viewer-current-page-{{ $pdf_viewer_index }}"></span> / <span id="pdf-viewer-total-page-{{ $pdf_viewer_index }}"></span>
+      </span>
+      <svg class="pdf-viewer-button pdf-viewer-button-next-page" id="pdf-viewer-button-next-page-{{ $pdf_viewer_index }}" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+    </div>
+    <div class="pdf-viewer-controls-right">
+      <a href="{{ $url }}" {{ if $title }}download="{{ $title }}.pdf"{{ else }}download{{ end}}><svg class="pdf-viewer-button pdf-viewer-button-download" id="pdf-viewer-button-download-{{ $pdf_viewer_index }}" viewBox="0 0 24 24"><path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" /></svg></a>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var url = '{{ $url }}';
+
+pdfjsLib.getDocument(url).promise.then(function(pdf) {
+  var pageNum = {{ $page }};
+  var pageRendering = false;
+  var pagePendingNum = null;
+  var scale = 3;
+  var canvas = document.getElementById('pdf-viewer-canvas-{{ $pdf_viewer_index }}');
+  var context = canvas.getContext('2d');
+  var loadingWrapper = document.getElementById('pdf-viewer-loading-wrapper-{{ $pdf_viewer_index }}');
+  var controlsContainer = document.getElementById('pdf-viewer-controls-container-{{ $pdf_viewer_index }}');
+  var prevPage = document.getElementById('pdf-viewer-button-prev-page-{{ $pdf_viewer_index }}');
+  var nextPage = document.getElementById('pdf-viewer-button-next-page-{{ $pdf_viewer_index }}');
+
+  var pdfNumPages = pdf.numPages;
+
+  if (pageNum > pdfNumPages) {
+    pageNum = pdfNumPages;
+  }
+
+  document.getElementById('pdf-viewer-total-page-{{ $pdf_viewer_index }}').textContent = pdfNumPages;
+  document.getElementById('pdf-viewer-button-prev-page-{{ $pdf_viewer_index }}').addEventListener('click', onPrevPage);
+  document.getElementById('pdf-viewer-button-next-page-{{ $pdf_viewer_index }}').addEventListener('click', onNextPage);
+
+  showLoader();
+  renderPage(pageNum);
+
+  function renderPage(pageNum) {
+    pdf.getPage(pageNum).then(function(page) {
+      var viewport = page.getViewport({scale: scale});
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      var renderContext = {
+        canvasContext: context,
+        viewport: viewport
+      };
+      var renderTask = page.render(renderContext);
+
+      renderTask.promise.then(function() {
+        pageRendering = false;
+        showContent();
+
+        if (pagePendingNum !== null) {
+          renderPage(pagePendingNum)
+          pagePendingNum = null;
+        }
+      });
+    });
+
+    document.getElementById('pdf-viewer-current-page-{{ $pdf_viewer_index }}').textContent = pageNum;
+  }
+
+  function showContent() {
+    loadingWrapper.style.display = 'none';
+    canvas.style.display = 'block';
+    controlsContainer.style.display = 'flex';
+  }
+
+  function showLoader() {
+    loadingWrapper.style.display = 'flex';
+    canvas.style.display = 'none';
+    controlsContainer.style.display = 'none';
+  }
+
+  function queueRenderPage(pageNum) {
+    if (pageRendering) {
+      pagePendingNum = pageNum;
+    } else {
+      renderPage(pageNum);
+    }
+  }
+
+  function onPrevPage() {
+    if (pageNum > 1) {
+      pageNum--;
+      queueRenderPage(pageNum);
+    }
+  }
+
+  function onNextPage() {
+    if (pageNum < pdfNumPages) {
+      pageNum++;
+      queueRenderPage(pageNum);
+    }
+  }
+}, function(reason) {
+  console.error(reason);
+});
+</script>

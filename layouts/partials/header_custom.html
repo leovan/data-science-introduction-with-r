@@ -1,0 +1,19 @@
+<script src='{{ .Site.Params.jQueryCDN }}/jquery/{{ .Site.Params.jQueryVersion }}/jquery.min.js'></script>
+<script src='{{ .Site.Params.jsCookieCDN }}/js-cookie/{{ .Site.Params.jsCookieVersion }}/js.cookie.min.js'></script>
+
+{{ partial "google_analytics.html" . }}
+
+{{ if and (not .Params.disable_mathjax) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ partial "header_mathjax.html" . }}
+{{ end }}
+
+{{ if and (not .Params.disable_prismjs) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ partial "header_prismjs.html" . }}
+{{ end }}
+
+{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ partial "google_adsense.html" . }}
+{{ end }}
+
+<link rel="stylesheet" type="text/css" href="{{ "/css/reset.css" | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">

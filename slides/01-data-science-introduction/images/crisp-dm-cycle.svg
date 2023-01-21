@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 481.88977 481.88976" width="481.88977pt" height="481.88976pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.4.2 
+    <dc:date>2017-09-29 09:59:27 +0000</dc:date>
+  </metadata>
+  <defs>
+    <linearGradient x1="0" x2="1" id="Gradient" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white"/>
+      <stop offset="1" stop-color="#dfdfdf"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(240.8436 250.01636) rotate(-90) scale(65.76409)"/>
+    <radialGradient cx="0" cy="0" r="1" id="Gradient_2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white"/>
+      <stop offset="1" stop-color="silver"/>
+    </radialGradient>
+    <radialGradient id="Obj_Gradient_2" xl:href="#Gradient_2" gradientTransform="translate(297.6378 217.13385) scale(104.29378)"/>
+    <font-face font-family="PingFang SC" font-size="24" panose-1="2 11 4 0 0 0 0 0 0 0" units-per-em="1000" underline-position="-150" underline-thickness="58" slope="0" x-height="600" cap-height="860" ascent="1060.0021" descent="-340.0007" font-weight="500">
+      <font-face-src>
+        <font-face-name name="PingFangSC-Regular"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="PingFang SC" font-size="18" panose-1="2 11 4 0 0 0 0 0 0 0" units-per-em="1000" underline-position="-150" underline-thickness="58" slope="0" x-height="600" cap-height="860" ascent="1060.0021" descent="-340.0007" font-weight="500">
+      <font-face-src>
+        <font-face-name name="PingFangSC-Regular"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>页-1</title>
+    <rect fill="white" width="481.88977" height="481.88976"/>
+    <g>
+      <title>Layer 1</title>
+      <path d="M 14.17323 240.9449 L 14.173224 240.9449 C 14.173223 115.70236 115.70235 14.173236 240.94488 14.173235 C 366.1874 14.173233 467.71653 115.70236 467.71653 240.94488 C 467.71653 240.94488 467.71653 240.9449 467.71653 240.9449 L 467.7165 240.9449 C 467.7165 366.1874 366.1874 467.71653 240.94488 467.71653 C 115.70235 467.71653 14.173231 366.1874 14.17323 240.9449 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="6"/>
+      <path d="M 224.17322 27.87402 L 252.04724 13.937011 L 224.17323 2842171e-20 Z" fill="black"/>
+      <path d="M 224.17322 27.87402 L 252.04724 13.937011 L 224.17323 2842171e-20 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".24"/>
+      <path d="M 252.04724 454.01574 L 224.17322 467.95275 L 252.04725 481.88976 Z" fill="black"/>
+      <path d="M 252.04724 454.01574 L 224.17322 467.95275 L 252.04725 481.88976 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".24"/>
+      <path d="M 27.87402 254.8819 L 13.93701 227.00787 L 17763568e-22 254.8819 Z" fill="black"/>
+      <path d="M 27.87402 254.8819 L 13.93701 227.00787 L 17763568e-22 254.8819 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".24"/>
+      <path d="M 454.01575 217.71653 L 467.95276 245.59055 L 481.88977 217.71653 Z" fill="black"/>
+      <path d="M 454.01575 217.71653 L 467.95276 245.59055 L 481.88977 217.71653 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".24"/>
+      <path d="M 297.43506 217.13442 L 297.43506 217.13442 C 297.44984 219.58513 296.99307 222.02815 296.07325 224.41798 L 296.07325 224.41798 C 296.993 222.02815 297.44972 219.58512 297.43488 217.13442 M 297.43488 217.13442 L 297.4349 217.13442 C 297.3249 198.974 271.89895 184.25227 240.64444 184.25253 C 209.39056 184.25278 184.1432 198.97436 184.2523 217.13442 L 184.25197 264.75647 L 184.25197 264.75647 C 184.3621 282.91697 209.78828 297.6387 241.04293 297.63836 C 272.29675 297.63803 297.54403 282.9165 297.43506 264.75647 L 297.6378 264.75647 L 297.6378 217.13442 L 297.43506 217.13442" fill="fuchsia" fill-opacity="0"/>
+      <path d="M 297.43506 217.13442 L 297.43506 217.13442 C 297.44984 219.58513 296.99307 222.02815 296.07325 224.41798 L 296.07325 224.41798 C 296.993 222.02815 297.44972 219.58512 297.43488 217.13442 M 297.43488 217.13442 L 297.4349 217.13442 C 297.3249 198.974 271.89895 184.25227 240.64444 184.25253 C 209.39056 184.25278 184.1432 198.97436 184.2523 217.13442 L 184.25197 264.75647 L 184.25197 264.75647 C 184.3621 282.91697 209.78828 297.6387 241.04293 297.63836 C 272.29675 297.63803 297.54403 282.9165 297.43506 264.75647 L 297.6378 264.75647 L 297.6378 217.13442 L 297.43506 217.13442" stroke="black" stroke-opacity="0" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".72"/>
+      <ellipse cx="240.8436" cy="217.1343" rx="56.5919" ry="32.882098" fill="url(#Obj_Gradient)"/>
+      <ellipse cx="240.8436" cy="217.1343" rx="56.5919" ry="32.882098" stroke="white" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".72"/>
+      <path d="M 184.25197 217.13385 L 184.25197 264.58143 L 184.25197 264.7559 L 184.25197 264.7559 C 184.3621 282.9164 209.78828 297.63813 241.04293 297.6378 C 272.29675 297.63746 297.54403 282.91593 297.43506 264.7559 L 297.6378 264.7559 L 297.6378 217.13385 L 297.43506 217.13385 L 297.43505 217.13385 C 297.5446 235.29427 272.29664 250.0162 241.04214 250.0162 C 209.78764 250.0162 184.36205 235.29427 184.2525 217.13385" fill="url(#Obj_Gradient_2)"/>
+      <path d="M 184.25197 217.13385 L 184.25197 264.58143 L 184.25197 264.7559 L 184.25197 264.7559 C 184.3621 282.9164 209.78828 297.63813 241.04293 297.6378 C 272.29675 297.63746 297.54403 282.91593 297.43506 264.7559 L 297.6378 264.7559 L 297.6378 217.13385 L 297.43506 217.13385 L 297.43505 217.13385 C 297.5446 235.29427 272.29664 250.0162 241.04214 250.0162 C 209.78764 250.0162 184.36205 235.29427 184.2525 217.13385" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".72"/>
+      <path d="M 297.4349 217.13477 L 297.4349 217.13477 C 297.32577 198.97435 271.90052 184.25222 240.64602 184.25196 C 209.39152 184.2517 184.1432 198.97343 184.25231 217.13385 C 184.25232 217.13416 184.25232 217.13447 184.25232 217.13477 L 184.25197 264.75682 L 184.25197 264.75682 C 184.3621 282.91732 209.78828 297.63905 241.04293 297.6387 C 272.29675 297.63838 297.54403 282.91685 297.43505 264.75682 L 297.6378 264.75682 L 297.6378 217.13477 L 297.43505 217.13477" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1.5"/>
+      <text transform="translate(188.25197 203.18504)" fill="#777">
+        <tspan font-family="PingFang SC" font-size="24" font-weight="500" fill="#777" x="28.69291" y="25" textLength="48">数据</tspan>
+      </text>
+      <rect x="113.38583" y="70.86614" width="99.2126" height="56.69291" fill="white"/>
+      <rect x="113.38583" y="70.86614" width="99.2126" height="56.69291" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <text transform="translate(117.38583 86.7126)" fill="#777">
+        <tspan font-family="PingFang SC" font-size="18" font-weight="500" fill="#777" x="9.6063" y="19" textLength="72">业务理解</tspan>
+      </text>
+      <rect x="269.29134" y="70.86614" width="99.2126" height="56.69291" fill="white"/>
+      <rect x="269.29134" y="70.86614" width="99.2126" height="56.69291" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <text transform="translate(273.29134 86.7126)" fill="#777">
+        <tspan font-family="PingFang SC" font-size="18" font-weight="500" fill="#777" x="9.6063" y="19" textLength="72">数据理解</tspan>
+      </text>
+      <rect x="325.98425" y="162.99213" width="99.2126" height="56.69291" fill="white"/>
+      <rect x="325.98425" y="162.99213" width="99.2126" height="56.69291" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <text transform="translate(329.98425 178.83859)" fill="#777">
+        <tspan font-family="PingFang SC" font-size="18" font-weight="500" fill="#777" x="9.6063" y="19" textLength="72">数据准备</tspan>
+      </text>
+      <rect x="325.98425" y="262.20473" width="99.2126" height="56.69291" fill="white"/>
+      <rect x="325.98425" y="262.20473" width="99.2126" height="56.69291" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <text transform="translate(329.98425 278.0512)" fill="#777">
+        <tspan font-family="PingFang SC" font-size="18" font-weight="500" fill="#777" x="27.6063" y="19" textLength="36">建模</tspan>
+      </text>
+      <rect x="191.33858" y="354.3307" width="99.2126" height="56.69291" fill="white"/>
+      <rect x="191.33858" y="354.3307" width="99.2126" height="56.69291" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <text transform="translate(195.33858 370.17717)" fill="#777">
+        <tspan font-family="PingFang SC" font-size="18" font-weight="500" fill="#777" x="27.6063" y="19" textLength="36">评估</tspan>
+      </text>
+      <rect x="42.51968" y="212.59843" width="99.2126" height="56.69291" fill="white"/>
+      <rect x="42.51968" y="212.59843" width="99.2126" height="56.69291" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <text transform="translate(46.51968 228.44488)" fill="#777">
+        <tspan font-family="PingFang SC" font-size="18" font-weight="500" fill="#777" x="27.6063" y="19" textLength="36">部署</tspan>
+      </text>
+      <line x1="214.01575" y1="79.37007" x2="262.20472" y2="79.37007" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 259.37008 70.86614 L 267.87402 79.37007 L 259.37008 87.87401" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <line x1="267.87402" y1="99.21259" x2="219.68505" y2="99.21259" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 222.5197 107.71652 L 214.01575 99.21259 L 222.5197 90.70865" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 222.5197 127.55904 L 214.01575 119.05511 L 222.5197 110.55117" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 381.53784 149.95821 L 378.4252 161.5748 L 366.8086 158.46215" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 369.92125 252.56692 L 361.4173 261.07086 L 352.9134 252.56692" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 381.25985 229.32283 L 389.7638 220.8189 L 398.2677 229.32283" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <line x1="361.4173" y1="255.1181" x2="361.4173" y2="219.68504" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <line x1="389.7638" y1="260.7874" x2="389.7638" y2="226.77164" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 300.47244 391.1811 L 291.9685 382.67716 L 300.47244 374.1732" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 375.59055 318.89764 C 375.59055 318.89764 375.59056 318.89764 375.59056 318.89764 C 378.44454 350.0477 343.5439 378.60277 297.6378 382.67715 C 297.6378 382.67716 297.6378 382.67716 297.6378 382.67716" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 219.68504 119.05511 L 219.68504 119.05511 C 272.9131 119.05511 316.063 173.62702 316.063 240.94488 L 316.063 240.94488 C 316.063 303.56613 283.7006 354.3307 243.77954 354.3307 C 243.77954 354.3307 243.77953 354.3307 243.77953 354.3307" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 82.20473 279.2126 L 90.70866 270.70866 L 99.2126 279.2126" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 191.33858 382.67716 C 191.33858 382.67716 191.33858 382.67717 191.33858 382.67717 C 135.76221 382.67717 90.70867 335.0854 90.70866 276.37797 C 90.70866 276.37796 90.70866 276.37796 90.70866 276.37795" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 375.874 157.6063 C 375.874 157.6063 375.874 157.6063 375.874 157.6063 C 372.438 142.69943 346.9288 129.24682 318.89764 127.55905" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="2"/>
+      <path d="M 401.3178 80.57196 L 403.418 78.47178 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".75002"/>
+      <path d="M 236.90217 10.90953 L 243.98877 10.894145 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width=".75002"/>
+    </g>
+  </g>
+</svg>

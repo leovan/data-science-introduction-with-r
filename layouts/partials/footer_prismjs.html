@@ -1,0 +1,76 @@
+{{ if and (and (not .Params.disable_highlight) (in (string .Content) "</pre>")) (not .IsHome) }}
+{{ $lang := "cn" }}
+{{ if (eq .Section "en") }}
+{{ $lang = "en" }}
+{{ end }}
+{{ $clipboardjsVersion := .Site.Params.clipboardjsVersion }}
+{{ $clipboardjsCDN := .Site.Params.clipboardjsCDN }}
+{{ $prismjsVersion := .Site.Params.prismjsVersion }}
+{{ $prismjsCDN := .Site.Params.prismjsCDN }}
+<script src="{{ $clipboardjsCDN }}/clipboard.js/{{ $clipboardjsVersion }}/clipboard.min.js"></script>
+<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/prism.min.js"></script>
+{{ range .Site.Params.prismjsPluginJS }}
+<script src="{{ $prismjsCDN }}/prism/{{ $prismjsVersion }}/plugins/{{ . }}/prism-{{ . }}.min.js"></script>
+{{ end }}
+<script>
+    (function() {
+        if (!self.Prism) {
+            return;
+        }
+
+        // 显示语言
+        Prism.languages.dos = Prism.languages.powershell;
+        Prism.languages.gremlin = Prism.languages.groovy;
+
+        var Languages = {
+            'r': 'R', 'python': 'Python', 'xml': 'XML', 'html': 'HTML',
+            'yaml': 'YAML', 'latex': 'LaTeX', 'tex': 'TeX',
+            'powershell': 'PowerShell', 'javascript': 'JavaScript',
+            'dos': 'DOS', 'qml': 'QML', 'json': 'JSON', 'bash': 'Bash',
+            'text': 'Text', 'txt': 'Text', 'sparql': 'SPARQL',
+            'gremlin': 'Gremlin', 'cypher': 'Cypher', 'ngql': 'nGQL',
+            'shell': 'Shell', 'sql': 'SQL', 'apacheconf': 'Apache Configuration'
+        };
+
+        Prism.hooks.add('before-highlight', function(env) {
+            var language = Languages[env.language] || env.language;
+            env.element.setAttribute('data-language', language);
+        });
+
+        // 复制代码
+        var ClipboardJS = window.ClipboardJS || undefined;
+
+        Prism.plugins.toolbar.registerButton('copy-to-clipboard', function(env) {
+            var linkCopy = document.createElement('button');
+            linkCopy.textContent = '复制';
+
+            registerClipboard();
+
+            return linkCopy;
+
+            function registerClipboard() {
+                var clip = new ClipboardJS(linkCopy, {
+                    'text': function () {
+                        return env.code;
+                    }
+                });
+
+                clip.on('success', function() {
+                    linkCopy.textContent = '已复制';
+                    resetText();
+                });
+                clip.on('error', function () {
+                    linkCopy.textContent = '按 Ctrl+C 复制';
+                    resetText();
+                });
+            }
+
+            function resetText() {
+                setTimeout(function () {
+                    linkCopy.textContent = '复制';
+                }, 3000);
+            }
+        });
+    })();
+</script>
+{{ end }}

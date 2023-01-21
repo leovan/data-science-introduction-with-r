@@ -1,0 +1,43 @@
+\documentclass[tikz, convert={density=300,size=x400,outext=.png}]{standalone}
+\usetikzlibrary{arrows}
+\tikzstyle{input}=[circle,draw=black,fill=white,thick,minimum size=1cm]
+\tikzstyle{output}=[circle,draw=black,fill=white,thick,minimum size=1cm]
+\tikzstyle{bais}=[circle,draw=black,fill=white,thick,minimum size=1cm]
+\tikzstyle{hidden}=[circle,draw=black,fill=white,thick,minimum size=1cm]
+\tikzstyle{pre}=[<-,shorten <=1pt,>=stealth',semithick]
+\tikzstyle{post}=[->,shorten >=1pt,>=stealth',semithick]
+\begin{document}
+\begin{tikzpicture}[node distance=2cm, auto]
+    \node []       (x_1)                                 {$x_1$};
+    \node []       (x_2)  [below of=x_1]                 {$x_2$};
+    \node [input]  (a_11) [right of=x_1]                 {$a^{\left(1\right)}_1$};
+    \node [input]  (a_12) [below of=a_11]                {$a^{\left(1\right)}_2$};
+    \node [bais]  (b_1)  [below of=a_12]                {$b^{\left(1\right)}$};
+    \node [hidden] (a_21) [right of=a_11, yshift=1cm]    {$a^{\left(2\right)}_1$};
+    \node [hidden] (a_22) [below of=a_21]                {$a^{\left(2\right)}_2$};
+    \node [hidden] (a_23) [below of=a_22]                {$a^{\left(2\right)}_3$};
+    \node [bais]  (b_2)  [below of=a_23]                {$b^{\left(2\right)}$};
+    \node [hidden] (a_31) [right of=a_21, yshift=-1cm]   {$a^{\left(3\right)}_1$};
+    \node [hidden] (a_32) [below of=a_31]                {$a^{\left(3\right)}_2$};
+    \node [bais]  (b_3)  [below of=a_32]                {$b^{\left(3\right)}$};
+    \node [output] (a_41) [right of=a_31, yshift=-1cm]   {$a^{\left(4\right)}_1$};
+    \node []       (y)    [right of=a_41]                {$y$};
+     
+     
+    \path[post]
+      (x_1) edge (a_11)
+      (x_2) edge (a_12)
+      (a_11) edge (a_21) edge (a_22) edge (a_23)
+      (a_12) edge (a_21) edge (a_22) edge (a_23)
+      (b_1)  edge (a_21) edge (a_22) edge (a_23)
+      (a_21) edge (a_31) edge (a_32)
+      (a_22) edge (a_31) edge (a_32)
+      (a_23) edge (a_31) edge (a_32)
+      (b_2)  edge (a_31) edge (a_32)
+      (a_31) edge (a_41)
+      (a_32) edge (a_41)
+      (b_3)  edge (a_41)
+      (a_41) edge (y)
+    ;
+\end{tikzpicture}
+\end{document}

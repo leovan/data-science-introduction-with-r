@@ -1,0 +1,62 @@
+{{ partial "header.html" . }}
+
+<article class="main">
+{{ if .IsHome }}
+  <div class="index">
+    <div class="index-inner">
+      <img draggable="false" src="{{ site.Params.logo }}" title="{{ site.Params.title }}" width="{{ site.Params.imageWidth | default 150 }}"/>
+      <h1>{{ site.Params.title | markdownify }}</h1>
+      <span>{{ site.Params.subtitle | markdownify }}</span>
+      <div class="social-icons">
+      {{ range site.Params.socialIcons }}
+        <a href="{{ .url | default "#" }}" {{ if isset . "url" }}target="_blank"{{ end }} rel="noopener noreferrer me" title="{{ .title }}">
+          {{ if and (strings.HasSuffix .icon "svg") (strings.HasPrefix .icon "/") }}
+          {{ (print "/static" .icon) | readFile | safeHTML }}
+          {{ else }}
+          <img src="{{ .icon }}" />
+          {{ end }}
+        </a>
+      {{ end }}
+      </div>
+      <div class="buttons">
+      {{ range site.Params.buttons }}
+        <a class="button" href="{{ .url | default "#" }}" rel="noopener" title="{{ .title }}">
+          <span class="button-inner">
+            {{ .title }}
+          </span>
+        </a>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+{{ else }}
+  <div class="post-section">
+    <h1>{{ .Title }}</h1>
+  </div>
+  {{ range $index, $page := .Pages.ByWeight }}
+  <div class="post-entry">
+    <div class="post-entry-left">
+      <figure class="post-entry-cover">
+        <img loading="lazy" src="{{ $page.Params.cover }}" />
+      </figure>
+    </div>
+    <div class="post-entry-right">
+      <div class="post-entry-header">
+        <h2>{{ printf "%02d" (add $index 1) }} - {{ $page.Title }}</h2>
+      </div>
+      <div class="post-entry-content">
+        <p>{{ $page.Params.description | markdownify }}</p>
+      </div>
+      <div class="post-entry-footer">
+        {{ range $tag := $page.Params.tags }}
+        <span class="post-entry-tag">{{ $tag }}</span>
+        {{ end }}
+      </div>
+    </div>
+    <a class="post-entry-link" href="{{ .RelPermalink }}"></a>
+  </div>
+  {{ end }}
+{{ end }}
+</article>
+
+{{ partial "footer.html" . }}
