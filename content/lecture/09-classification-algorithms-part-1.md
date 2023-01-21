@@ -1,7 +1,7 @@
 ---
 title: 分类算法（上）
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: classification-algorithms-part-1
 description: 逻辑回归和决策树是用于分类任务的经典监督学习算法，同时其具有较好的解释性。
 weight: 9

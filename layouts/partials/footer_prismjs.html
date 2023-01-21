@@ -1,8 +1,4 @@
-{{ if and (and (not .Params.disable_highlight) (in (string .Content) "</pre>")) (not .IsHome) }}
-{{ $lang := "cn" }}
-{{ if (eq .Section "en") }}
-{{ $lang = "en" }}
-{{ end }}
+{{ if and (and (not .Params.disable_highlight) (in (string .Content) "</code>")) (not .IsHome) }}
 {{ $clipboardjsVersion := .Site.Params.clipboardjsVersion }}
 {{ $clipboardjsCDN := .Site.Params.clipboardjsCDN }}
 {{ $prismjsVersion := .Site.Params.prismjsVersion }}

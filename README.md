@@ -1,4 +1,4 @@
-# R 语言数据科学导论 <img src="images/data-science-introduction-with-r.png" align="right" alt="logo" height="100" style="border: none; float: right;">
+# R 语言数据科学导论 <img src="static/images/data-science-introduction-with-r.png" align="right" alt="logo" height="100" style="border: none; float: right;">
 
 ![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-r.svg)
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
@@ -8,9 +8,7 @@
 
 ## 简介
 
-本项目是以 R 语言为基础的数据科学入门教程。
-
-在线版本托管在 https://ds-r.leovan.tech 上，源代码存储在 [Github](https://github.com/leovan/data-science-introduction-with-r) 中。
+本项目是以 R 语言为基础的数据科学入门教程，在线版本托管在 https://ds-r.leovan.tech 上。
 
 ## 参考
 

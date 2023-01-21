@@ -1,7 +1,7 @@
 ---
 title: 特征工程
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: feature-engineering
 description: 特征工程是指从实际业务发生产生的原始数据加工得到最终用于特定的挖掘算法的输入变量的过程。
 weight: 7

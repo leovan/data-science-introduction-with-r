@@ -1,7 +1,7 @@
 ---
 title: 数据可视化
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: data-visualization
 description: 数据可视化旨在借助于图形化手段，清晰有效地传达与沟通信息，数据可视化既是一门艺术也是一门科学。
 weight: 5

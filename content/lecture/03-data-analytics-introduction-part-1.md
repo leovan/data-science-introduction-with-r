@@ -1,7 +1,7 @@
 ---
 title: 数据分析基础 (上)
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: data-analytics-introduction-part-1
 description: 基于 tidyverse 扩展包的数据导入、数据导出、数据转换和数据规整。
 weight: 3

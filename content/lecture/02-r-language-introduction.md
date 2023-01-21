@@ -1,7 +1,7 @@
 ---
 title: R 语言简介
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: r-language-introduction
 description: R 语言是一种解释型编程语言，主要用于统计分析、绘图以及数据挖掘。
 weight: 2

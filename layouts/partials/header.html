@@ -43,7 +43,7 @@
         </div>
         <ul id="menu">
           {{ $currentPage := . }}
-          {{ range site.Menus.main }}
+          {{ range .Site.Menus.main }}
           {{ $menu_url := .URL }}
           {{ $page_url := $currentPage.RelPermalink }}
           <li>

@@ -48,6 +48,8 @@
 
 <script type="text/javascript">
 var url = '{{ $url }}';
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+pdfjsLib.GlobalWorkerOptions.workerSrc = '{{ $pdfjsCDN }}/pdf.js/{{ $pdfjsVersion }}/pdf.worker.js';
 
 pdfjsLib.getDocument(url).promise.then(function(pdf) {
   var pageNum = {{ $page }};

@@ -1,7 +1,7 @@
 ---
 title: 开发环境安装配置手册
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: ide-installation-manual
 description: 手册主要介绍在 Windows 和 macOS 系统中安装并配置 R 语言相关开发环境。
 weight: 1

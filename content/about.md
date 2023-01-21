@@ -1,7 +1,7 @@
 ---
 title: 关于
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: about
 disable_mathjax: true
 disable_prismjs: true

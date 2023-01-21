@@ -18,17 +18,17 @@
     </div>
     {{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
     <ins class="post-adsbygoodle adsbygoogle"
-      style="display:block"
-      data-ad-client="{{ .Site.GoogleAnalytics }}"
-      data-ad-slot="5366503013"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
+      style="display:block; text-align:center;"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="{{ .Site.Params.googleAdsense }}"
+      data-ad-slot="3133454867"></ins>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     {{ end }}
     <div class="post-footer">
-      {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
       {{ if and (gt (len $pages) 1) (in $pages . ) }}
       <nav class="post-footer-nav">
         {{ with $pages.Next . }}

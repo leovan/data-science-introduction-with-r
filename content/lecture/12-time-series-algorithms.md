@@ -1,7 +1,7 @@
 ---
 title: 时间序列算法
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: time-series-algorithms
 description: 时间序列分析的目的是挖掘时间序列中隐含模式，并借此对此序列进行评估以及对后续趋势进行预测。
 weight: 12

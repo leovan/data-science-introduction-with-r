@@ -1,7 +1,7 @@
 ---
 title: 统计分析基础
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: statistical-analytics-introduction
 description: 统计分析方法是广泛使用的现代科学方法，是一种比较科学、精确和客观的测评方法。
 weight: 6

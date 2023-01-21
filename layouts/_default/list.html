@@ -4,11 +4,11 @@
 {{ if .IsHome }}
   <div class="index">
     <div class="index-inner">
-      <img draggable="false" src="{{ site.Params.logo }}" title="{{ site.Params.title }}" width="{{ site.Params.imageWidth | default 150 }}"/>
-      <h1>{{ site.Params.title | markdownify }}</h1>
-      <span>{{ site.Params.subtitle | markdownify }}</span>
+      <img draggable="false" src="{{ .Site.Params.logo }}" title="{{ .Site.Params.title }}" width="{{ .Site.Params.imageWidth | default 150 }}"/>
+      <h1>{{ .Site.Params.title | markdownify }}</h1>
+      <span>{{ .Site.Params.subtitle | markdownify }}</span>
       <div class="social-icons">
-      {{ range site.Params.socialIcons }}
+      {{ range .Site.Params.socialIcons }}
         <a href="{{ .url | default "#" }}" {{ if isset . "url" }}target="_blank"{{ end }} rel="noopener noreferrer me" title="{{ .title }}">
           {{ if and (strings.HasSuffix .icon "svg") (strings.HasPrefix .icon "/") }}
           {{ (print "/static" .icon) | readFile | safeHTML }}
@@ -19,7 +19,7 @@
       {{ end }}
       </div>
       <div class="buttons">
-      {{ range site.Params.buttons }}
+      {{ range .Site.Params.buttons }}
         <a class="button" href="{{ .url | default "#" }}" rel="noopener" title="{{ .title }}">
           <span class="button-inner">
             {{ .title }}

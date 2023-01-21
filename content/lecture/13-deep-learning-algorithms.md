@@ -1,7 +1,7 @@
 ---
 title: 深度学习算法
 author: 范叶亮
-date: 2023-01-22
+date: 2023-01-21
 slug: deep-learning-algorithms
 description: 深度学习是机器学习的分支，是一种以人工神经网络为架构，对资料进行表征学习的算法。
 weight: 13
