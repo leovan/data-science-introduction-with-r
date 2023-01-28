@@ -7,9 +7,7 @@
     if (code.tagName !== 'CODE') continue;
     cls = code.className;
     if (cls === '' || cls === 'hljs') {
-      code.className = 'nohighlight';
-    } else if (/^language-/.test(cls) && !/hljs/.test(cls)) {
-      code.className += ' hljs';
+      code.className = 'language-plain';
     }
   }
 })();
