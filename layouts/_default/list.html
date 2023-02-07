@@ -9,7 +9,7 @@
       <span>{{ .Site.Params.subtitle | markdownify }}</span>
       <div class="social-icons">
       {{ range .Site.Params.socialIcons }}
-        <a href="{{ .url | default "#" }}" {{ if isset . "url" }}target="_blank"{{ end }} rel="noopener noreferrer me" title="{{ .title }}">
+        <a class="social-icon" href="{{ .url | default "#" }}" {{ if isset . "url" }}target="_blank"{{ end }} rel="noopener noreferrer me" title="{{ .title }}">
           {{ if and (strings.HasSuffix .icon "svg") (strings.HasPrefix .icon "/") }}
           {{ (print "/static" .icon) | readFile | safeHTML }}
           {{ else }}
