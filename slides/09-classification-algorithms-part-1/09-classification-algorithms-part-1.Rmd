@@ -5,9 +5,8 @@ author: "范叶亮 | Leo Van"
 date: ""
 output:
   xaringan::moon_reader:
-    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js
+    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js
     css:
-      - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css
       - https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css
       - css/style.css
     includes:
@@ -366,16 +365,18 @@ $$\textrm{Gini}\left(p\right) = \sum_{i=1}^{n} p_i \left(1 - p_i\right) = 1 - \s
 假设特征 $A$ 有 $n$ 中取值，可以将数据集划分为 $D_1, D_2, ..., D_n$，则在已知特征 $A$ 的前提下，数据集 $D$ 的 Gini 指数定义为：
 
 $$\textrm{Gini}\left(D, A\right) = \sum_{i=1}^{n} \dfrac{\left|D_i\right|}{\left|D\right|} \textrm{Gini}\left(D_i\right)$$
+
+则特征“天气”的 Gini 指数：
 ]
 
 .pull-right[
-则高尔夫俱乐部光顾数据集关于特征“天气”的 Gini 指数 $\textrm{Gini}\left(D, A\right)$：
-
 $$\begin{split}
 &\textrm{Gini}\left(D, A\right) \\
 =& \dfrac{5}{14} \textrm{Gini}\left(D_1\right) + \dfrac{5}{14} \textrm{Gini}\left(D_2\right) + \dfrac{4}{14} \textrm{Gini}\left(D_3\right) \\
-=& \dfrac{5}{14} \left[1 - \left(\dfrac{2}{5}\right)^2 - \left(\dfrac{3}{5}\right)^2 \right] + \dfrac{5}{14} \left[1 - \\
-\left(\dfrac{3}{5}\right)^2 - \left(\dfrac{2}{5}\right)^2 \right] + \dfrac{4}{14} \left[1 - \left(\dfrac{4}{4}\right)^2 - \left(\dfrac{0}{4}\right)^2 \right] \\
+=& \dfrac{5}{14} \left[1 - \left(\dfrac{2}{5}\right)^2 - \left(\dfrac{3}{5}\right)^2 \right] + \\
+& \dfrac{5}{14} \left[1 - \\
+\left(\dfrac{3}{5}\right)^2 - \left(\dfrac{2}{5}\right)^2 \right] + \\
+& \dfrac{4}{14} \left[1 - \left(\dfrac{4}{4}\right)^2 - \left(\dfrac{0}{4}\right)^2 \right] \\
 =& 0.171 + 0.171 + 0 \\
 =& 0.343
 \end{split}$$

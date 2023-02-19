@@ -5,9 +5,8 @@ author: "范叶亮 | Leo Van"
 date: ""
 output:
   xaringan::moon_reader:
-    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js
+    mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js
     css:
-      - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css
       - https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.css
       - css/style.css
     includes:
@@ -83,9 +82,9 @@ $$dist_{ed}\left(x, y\right) = \sqrt{\sum_{i=1}^{n} \left(x_i - y_i\right)^2}$$
 
 曼哈顿距离和欧式距离直观比较如图所示：
 
-.center[
-![](images/man-and-ed-distance.svg)
-]
+```{r echo=F, out.width="30%", fig.align="center"}
+knitr::include_graphics('images/man-and-ed-distance.svg')
+```
 
 ---
 class:
