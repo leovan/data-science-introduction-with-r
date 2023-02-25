@@ -101,7 +101,7 @@ class:
 
 通过上述步骤的计算，K-means 算法可以将样本点划分为 $k$ 个簇，并得到每个簇的最终中心 $\mu_i$。
 
-利用 K-means 算法，我们对 iris 数据集进行聚类分析。iris 数据集包含了 Sepal.Length，Sepal.Width，Petal.Length，Petal.Width 以及花的种类共 5 列数据。为了能够更直观的演示，我们进采用 Petal.Length 和 Petal.Width 两列数据。K-means 是一种无监督的学习算法，因此我们并没有先验知识知道数据最适合分为几个簇，同时 K-means 算法又是一个对于聚类中心初始点敏感的算法，因此同样为了便于演示效果，在此我们设置簇的个数 $k = 3$，
+利用 K-means 算法，我们对 iris 数据集进行聚类分析。iris 数据集包含了 Sepal.Length，Sepal.Width，Petal.Length，Petal.Width 以及花的种类共 5 列数据。为了能够更直观的演示，我们仅采用 Petal.Length 和 Petal.Width 两列数据。K-means 是一种无监督的学习算法，因此我们并没有先验知识知道数据最适合分为几个簇，同时 K-means 算法又是一个对于聚类中心初始点敏感的算法，因此同样为了便于演示效果，在此我们设置簇的个数 $k = 3$，
 $3$ 个簇对应的初始中心点分别为 $\mu_1 = \left(2, 1\right), \mu_2 = \left(4, 2\right), \mu_3 = \left(6, 1\right)$。
 
 ---
