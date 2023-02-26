@@ -3,15 +3,15 @@
 
 {{ partial "google_analytics.html" . }}
 
-{{ if and (not .Params.disable_mathjax) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) .Content }}
 {{ partial "header_mathjax.html" . }}
 {{ end }}
 
-{{ if and (not .Params.disable_prismjs) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) .Content }}
 {{ partial "header_prismjs.html" . }}
 {{ end }}
 
-{{ if and (not .Params.disable_adsense) (or (eq .Kind "404") (and (not .IsHome) .Content)) }}
+{{ if and (not .Params.disable_adsense) (ne .Kind "404") }}
 {{ partial "google_adsense.html" . }}
 {{ end }}
 

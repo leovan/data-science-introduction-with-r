@@ -1,7 +1,7 @@
 /* variables */
 :root {
   --gap: 24px;
-  --content-gap: 20px;
+  --content-gap: 24px;
   --nav-width: 720px;
   --main-width: 720px;
   --header-height: 60px;
@@ -594,20 +594,22 @@ body:not(.dark) #sun {
   margin: 8px 0;
   color: var(--secondary);
   font-size: 0.8em;
+  height: 3.2em;
   line-height: 1.6em;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  height: 3.2em;
   text-overflow: ellipsis;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .post-entry-footer {
   color: var(--secondary);
   font-size: 0.8em;
   overflow: hidden;
+  height: 2em;
+  line-height: 2em;
 }
 
 .post-entry-link {
@@ -639,7 +641,7 @@ body:not(.dark) #sun {
   box-shadow: 0 1px 0 var(--primary);
 }
 
-.post-entry-tag{
+.post-entry-tag {
   padding: 4px 8px 4px 8px;
   color: var(--secondary);
   font-size: 14px;
@@ -1105,6 +1107,10 @@ div.code-toolbar > .toolbar {
   /* post-entry */
   .post-entry-left {
     display: none;
+  }
+
+  .post-entry-right {
+    padding: var(--content-gap) var(--gap);
   }
 
   /* footer */
