@@ -1,10 +1,8 @@
-{{ $pdfjsVersion := .Site.Params.pdfjsVersion }}
-{{ $pdfjsCDN := .Site.Params.pdfjsCDN }}
 {{ if not ($.Page.Scratch.Get "pdfjs-loaded") }}
   {{ $.Page.Scratch.Set "pdfjs-loaded" 1 }}
   <link rel="stylesheet" type="text/css" href="/css/pdf-viewer.css">
-  <link rel="stylesheet" type="text/css" href="{{ $pdfjsCDN }}/pdf.js/{{ $pdfjsVersion }}/pdf_viewer.min.css">
-  <script src="{{ $pdfjsCDN }}/pdf.js/{{ $pdfjsVersion }}/pdf.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/web/pdf_viewer.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/build/pdf.min.js"></script>
 {{ end }}
 
 {{ if not ($.Page.Scratch.Get "pdf-viewer-index") }}
@@ -50,7 +48,7 @@
 (function(d) {
   var url = '{{ $url }}';
   var pdfjsLib = window['pdfjs-dist/build/pdf'];
-  pdfjsLib.GlobalWorkerOptions.workerSrc = '{{ $pdfjsCDN }}/pdf.js/{{ $pdfjsVersion }}/pdf.worker.js';
+  pdfjsLib.GlobalWorkerOptions.workerSrc = '//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/build/pdf.worker.js';
 
   var pageNum = {{ $page }};
   var pageRendering = false;

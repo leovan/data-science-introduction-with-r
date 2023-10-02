@@ -2,6 +2,8 @@
 
 {{ partial "footer_prismjs.html" . }}
 
+<script src='//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js'></script>
+
 <script async src="/js/fix-toc.js"></script>
 <script async src="/js/center-img.js"></script>
 <script async src="/js/right-quote.js"></script>
@@ -11,9 +13,9 @@
 <script src="/js/math-code.js"></script>
 <script src="/js/toggle-theme.js"></script>
 
-<script src="{{ .Site.Params.lazysizesCDN }}/lazysizes/{{ .Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
 
-<script src="{{ .Site.Params.vanillaBackToTopCDN }}/vanilla-back-to-top@{{ .Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>
 addBackToTop({
   diameter: 48

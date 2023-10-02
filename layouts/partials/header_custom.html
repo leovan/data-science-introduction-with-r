@@ -1,6 +1,3 @@
-<script src='{{ .Site.Params.jQueryCDN }}/jquery/{{ .Site.Params.jQueryVersion }}/jquery.min.js'></script>
-<script src='{{ .Site.Params.jsCookieCDN }}/js-cookie/{{ .Site.Params.jsCookieVersion }}/js.cookie.min.js'></script>
-
 {{ partial "google_analytics.html" . }}
 
 {{ if and (and (and (not .Params.disable_mathjax) (ne .Kind "404")) (not .IsHome)) .Content }}

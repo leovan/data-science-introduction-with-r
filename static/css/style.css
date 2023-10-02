@@ -17,9 +17,10 @@
 
   --block-border: #444444;
   --block-bg: #eeeeee;
-  --code-fg: #4f424c;
   --code-border: #dddddd;
+  --code-fg: #4f424c;
   --code-bg: #ffffff;
+  --code-lang-bg: #dddddd;
   --code-lang-fg: #4f424c;
   --back-to-top-shadow: rgba(0, 0, 0, .25);
 
@@ -70,9 +71,10 @@
 
   --block-border: #e6e6e6;
   --block-bg: #383838;
-  --code-fg: #cccccc;
   --code-border: #dddddd;
+  --code-fg: #cccccc;
   --code-bg: #383838;
+  --code-lang-bg: #cccccc;
   --code-lang-fg: #383838;
   --back-to-top-shadow: rgba(0, 0, 0, .25);
 
@@ -156,8 +158,6 @@ code {
 }
 
 pre code {
-  border-top: 1px solid var(--code-border) !important;
-  border-bottom: 1px solid var(--code-border) !important;
   background: var(--code-bg) !important;
 }
 
@@ -167,7 +167,7 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 pre[class*="language-"] > code[data-language]:before {
-  background: var(--code-border) !important;
+  background: var(--code-lang-bg) !important;
   color: var(--code-lang-fg) !important;
 }
 
@@ -262,6 +262,7 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.operator {
   color: var(--code-operator);
+  background: none;
 }
 
 .token.placeholder {
@@ -294,6 +295,7 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.string {
   color: var(--code-string);
+  background: none !important;
 }
 
 .token.symbol {
@@ -310,6 +312,7 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.url {
   color: var(--code-url);
+  background: none !important;
 }
 
 .token.variable {
@@ -330,6 +333,58 @@ pre[class*="language-"] > code[data-language]:before {
 
 .token.entity {
   cursor: help;
+}
+
+.code-toolbar {
+  position: relative;
+}
+
+.code-toolbar:hover > .toolbar > .toolbar-item > .prism-button-copy,
+.code-toolbar:focus-within > .toolbar > .toolbar-item > .prism-button-copy {
+  color: var(--code-button-copy-area-hover);
+}
+
+.prism-button-copy {
+  position: absolute;
+  top: .3em;
+  right: .3em;
+  color: var(--code-button-copy-default);
+  cursor: pointer;
+  display: block;
+  height: 1.5em;
+  /* outline-color: var(--md-accent-fg-color); */
+  outline-offset: 0.1rem;
+  transition: color .25s;
+  width: 1.5em;
+  border: 0;
+  background: #00000000;
+}
+
+.prism-button-copy:after {
+  -webkit-mask-image: var(--code-copy-icon);
+  mask-image: var(--code-copy-icon);
+  background-color: currentcolor;
+  content: "";
+  display: block;
+  height: 1.125em;
+  margin: 0 auto;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  width: 1.125em;
+}
+
+.prism-button-copy-success:after {
+  -webkit-mask-image: var(--code-copy-success-icon);
+  mask-image: var(--code-copy-success-icon);
+}
+
+.prism-button-copy-error:after {
+  -webkit-mask-image: var(--code-copy-error-icon);
+  mask-image: var(--code-copy-error-icon);
 }
 
 #back-to-top {

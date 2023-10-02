@@ -36,6 +36,7 @@ base/fonts
 /slides/**/libs
 /slides/**/generated
 /slides/**/*.html
+!/slides/_common/**
 
 # others
 *.h5

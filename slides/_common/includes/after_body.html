@@ -1,0 +1,93 @@
+<script>
+MathJax = {
+  loader: {
+    load: ['[tex]/boldsymbol']
+  },
+  tex: {
+    tags: "all",
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    packages: {
+      '[+]': ['boldsymbol']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emojione@4.5.0/lib/js/emojione.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  document.querySelectorAll(
+      '.remark-slide-content' +
+      ':not(.title-slide)' +
+      ':not(.section)' +
+      ':not(.content)' +
+      ':not(.thanks)'
+    ).forEach(el => {
+      el.innerHTML += '<a target="_black" href="https://leovan.me"><div class="logo"></div></a>';
+    });
+
+  $(".convert-emoji").each(function() {
+    var original = $(this).html();
+    // use .shortnameToImage if only converting shortnames (for slightly better performance)
+    var converted = emojione.toImage(original);
+    $(this).html(converted);
+  });
+
+  var captionCount = 0;
+  $(".convert-pseudocode").each(function() {
+    var pseudocode_options = {
+      indentSize: '1.2em',
+      commentDelimiter: '#',
+      lineNumber: true,
+      lineNumberPunc: ':',
+      noEnd: false,
+      captionCount: undefined
+    };
+    pseudocode_options.captionCount = captionCount;
+
+    var code = "\\begin{algorithm}\n";
+    if ($(this).attr("caption") != undefined) {
+      code += "\\caption{" + $(this).attr("caption") + "}\n";
+      captionCount += 1;
+    }
+    code += "\\begin{algorithmic}\n";
+    code += $('<div/>').html($(this).html()).text();
+    code += "\\end{algorithmic}\n";
+    code += "\\end{algorithm}";
+    code = code.replace(/`\\\(/g, "$");
+    code = code.replace(/\\\)`/g, "$");
+    $(this).html("");
+    var parent = $(this).parent().get(0);
+    pseudocode.render(code, parent, pseudocode_options);
+  });
+
+  $(".remark-code-line").each(function() {
+    var that = $(this);
+
+    ["ValueWarning",
+    "warnings.warn",
+    "## INFO:prophet",
+    "%|",
+    "WARNING:",
+    "## Disabling daily seasonality",
+    "cmdstanpy - INFO",
+    "forecasts with cutoffs between",
+    "n.changepoints greater than number of observations"].forEach(function(keyword) {
+      if (that.html().includes(keyword)) {
+        that.remove();
+      }
+    });
+
+    ["## ", "..."].forEach(function(keyword) {
+      if (that.html() === keyword) {
+        that.remove();
+      }
+    });
+  });
+});
+</script>
