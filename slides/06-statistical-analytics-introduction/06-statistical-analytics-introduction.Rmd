@@ -1,7 +1,7 @@
 ---
 title: "统计分析基础"
 subtitle: "Statistical Analytics Introduction"
-author: "范叶亮 | Leo Van"
+author: "范叶亮"
 date: ""
 output:
   xaringan::moon_reader:
@@ -771,10 +771,10 @@ $${\beta}_i := {\beta}_i - \alpha \dfrac{\partial}{\partial {\beta}_i} C\left({\
 ---
 class: thanks, center, middle
 
-# Thanks
+# 感谢倾听
 
 ![CC BY-NC-SA 4.0](assets/by-nc-sa.svg)
 
-本作品采用 [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可
+本作品采用 [**CC BY-NC-SA 4.0**](https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE) 授权
 
-Copyright © [**范叶亮 | Leo Van**](https://leovan.me), All Rights Reserved.
+版权所有 © [**范叶亮**](https://leovan.me)

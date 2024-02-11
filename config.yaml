@@ -31,11 +31,11 @@ menu:
 params:
   title: "R 语言数据科学导论"
   subtitle: "Data Science Introduction with R"
-  author: "范叶亮 | Leo Van"
+  author: "范叶亮"
   description: "R 语言数据科学导论 | Data Science Introduction with R"
   logo: "/images/data-science-introduction-with-r.png"
   logoWidth: 150
-  footer: "Copyright &copy; 2017-{Year} [范叶亮 | Leo Van](https://leovan.me)"
+  footer: "Copyright &copy; 2017-{Year} [范叶亮](https://leovan.me)"
   licenseURL: "https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE"
   googleAdsense: "ca-pub-2608165017777396"
 
@@ -58,9 +58,9 @@ params:
   clipboardjsVersion: "2.0.11"
   lazysizesVersion: "5.3.2"
   mathjaxVersion: "3.2.2"
-  pdfjsVersion: "3.11.174"
-  prismjsVersion: "1.29.0"
   jsCookieVersion: "3.0.5"
+  pdfjsVersion: "4.0.379"
+  prismjsVersion: "1.29.0"
   vanillaBackToTopVersion: "latest"
 
 markup:

@@ -1,7 +1,7 @@
 ---
 title: "可重复性研究"
 subtitle: "Reproducible Research"
-author: "范叶亮 | Leo Van"
+author: "范叶亮"
 date: ""
 output:
   xaringan::moon_reader:
@@ -30,8 +30,8 @@ options(htmltools.dir.version = FALSE)
 <div class="content-page">
   <p class="content-page-title">目录</p>
   <li class="content-page-list">Markdown</li>
-  <li class="content-page-list">R Markdown</li>
   <li class="content-page-list">Jupyter</li>
+  <li class="content-page-list">Quarto</li>
   <li class="content-page-list">版本控制</li>
 </div>
 
@@ -82,7 +82,7 @@ knitr::include_graphics('images/reproducibility-layers.png')
 ```
 
 .footnote[
-[1]. 图片来源：https://mozillafoundation.github.io/2017-fellows-sf/re-papers/
+[1] 图片来源：https://mozillafoundation.github.io/2017-fellows-sf/re-papers/
 ]
 
 ---
@@ -110,7 +110,7 @@ class:
 
 # Markdown
 
-- 段落和换行
+#### 段落和换行
 
 一个段落通常是由一个或多个空行分割的一个或多个连续的文本行所组成。只要是看起来是空的行即可视为空行，例如：某一行包含了空格或制表符，但其仍被视为空行。普通段落不应该用空格或制表符进行缩进。
 
@@ -121,7 +121,7 @@ class:
 
 # Markdown
 
-- 标题
+#### 标题
 
 Markdown 支持两种标题语法：一种是利用 `=`（最高等级标题）和 `-`（第二等级标题），例如：
 
@@ -149,7 +149,7 @@ class:
 
 # Markdown
 
-- 标题
+#### 标题
 
 另一种是利用在行首插入 1 至 6 个 `#` 号，对应 1 至 6 级标题，例如：
 
@@ -202,7 +202,7 @@ class:
 
 # Markdown
 
-- 区块引用
+#### 区块引用
 
 .pull-left[
 Markdown 可以使用类似 email 中的 `>` 的引用模式。在每一行前面加上 `>`，或只在段落的第一行前面加上 `>` 都可以实现区块引用的效果，例如：
@@ -244,7 +244,7 @@ class:
 
 # Markdown
 
-- 列表
+#### 列表
 
 对于无序的列表，可以使用星号 `*`，加号 `+` 或减号 `-` 作为标记，不同符号的效果是相同的；对于有序的列表，可以使用数字紧跟一个英文句号作为标记，数字的连续型和正确性并不影响有序列表的输出效果，但 Markdown 会将第一个数字作为起始值。
 
@@ -281,7 +281,7 @@ class:
 
 # Markdown
 
-- 代码
+#### 代码
 
 对于和程序相关的写作通常会包含大量的代码区块，通常对于这些代码我们不希望以一般的格式对其进行排版，而是希望代码区块保持原始的样子。
 
@@ -319,7 +319,7 @@ class:
 
 # Markdown
 
-- 分隔线
+#### 分隔线
 
 在 Markdown 中可以使用 3 个及以上的星号 `*`，减号 `-` 或下划线 `_` 来建立一个分隔线。构建分割线的行内不能够有其他的符号，但在星号，减号和下划线之间可以插入空格，例如：
 
@@ -338,7 +338,7 @@ class:
 
 # Markdown
 
-- 链接
+#### 链接
 
 Markdown 支持两种样式的链接语法：行内样式和参考样式。
 
@@ -357,7 +357,7 @@ class:
 
 # Markdown
 
-- 强调
+#### 强调
 
 Markdown 中使用星号 `*` 和下划线 `_` 作为强调的标记符号。被单个星号或下划线包围的文字转换后会被 `<em>` 标签包围，被两个星号或下划线包围的文字转换后会被 `<strong>` 包围，例如：
 
@@ -382,7 +382,7 @@ class:
 
 # Markdown
 
-- 图片
+#### 图片
 
 Markdown 中插入图片的方式和插入链接的方式类似，图片插入语法示例如下：
 
@@ -398,7 +398,7 @@ class:
 
 # Markdown
 
-- 表格
+#### 表格
 
 表格并不是 Markdown 核心规范的一部分，但是 GFM（Github Flavored Markdown）一部分。在 Markdown 中，表格的示例如下：
 
@@ -429,7 +429,7 @@ class:
 
 # Markdown
 
-- 转义字符
+#### 转义字符
 
 在 Markdown 中有很多符号最为了 Markdown 语法的标记符号，因此当需要将这些符号作为普通文本是，需要在其前面加上反斜杠进行转义。需要在其前面加上反斜杠进行转义的符号有：
 
@@ -454,7 +454,9 @@ class:
 ---
 class:
 
-# Markdown 公式
+# Markdown
+
+#### 公式
 
 在 Markdown 中通过 MathJax <sup>[1]</sup> 可以嵌入 LaTeX 公式，例如：
 
@@ -468,119 +470,6 @@ class:
 
 .footnote[
 [1] https://www.mathjax.org/
-]
-
----
-class: section, center, middle
-
-# R Markdown
-
----
-class:
-
-# R Markdown
-
-R Markdown 是一种利用 R 语言创建动态文档，演示文稿和报告的语言。它包含了 Markdown 的核心语法和嵌入式的R语言代码块，从而可以使 R 代码的结果直接包含在最终的文档中。R Markdown 文档可以完全被重现，因为任何时刻底层的 R 语言代码或数据发生改变，最终生成的文档也被重新生成。R Markdown 包含了很多增强特性：
-
-1. 多种输出格式（包括 HTML，PDF 和 MS WORD）。
-2. 支持创作 Beamer，ioslides 和 Slidy 样式的演示文档。
-3. 支持表格和参考文献的 Markdown 语法。
-4. 用于个性化 HTM L和 PDF 的接口（包括 CSS，headers 和 footers）。
-5. 用于个性化 PDF 输出的原始 LaTeX 支持。
-6. 利用 R 脚本编译 HTML，PDF 或 MS WORD 笔记。
-7. 可扩展性：创建自定义模板或定义新的输出格式。
-8. 利用 Shiny 创建可以交互性 R Markdown 文档。
-
-尽管用户可以按照 R Markdown 的语法要求书写 R Markdown 文档，并利用 rmakrdown 扩展包中的 `render()` 函数渲染文档并生成最终的文档，但利用 knitr 扩展包会让生成一份优美的文档变得更加“优美”。
-
----
-class:
-
-# R Markdown
-
-- R 代码块
-
-.pull-left[
-在 R Markdown 中，通过如下方式嵌入 R 代码块：
-    `r ''````{r}
-    summary(cars)
-    ```
-]
-
-.pull-right[
-```{r}
-summary(cars)
-```
-]
-
-在 R 代码块中可以指定相应参数，例如：
-
-    `r ''````{r, echo=FALSE, fig.width=8, fig.height=6}
-    plot(cars)
-    ```
-
----
-class:
-
-# R Markdown
-
-- 行内执行 R 代码
-
-R Markdown 还支持在文本行内执行 R 代码，待执行的 R 代码需要用反引号包围起来并在开头添加 `r`，例如：
-
-```md
-行内计算的结果为 `r 1+1`
-```
-
-则输出的结果为:
-
-行内计算的结果为 `r 1+1`
-
----
-class:
-
-# R Markdown
-
-- 图像编码和打包
-
-当 R Markdown 被转化为 HTML 时，文件中用相应图像将直接被打包进最终生成的 HTML 文件中。图像通过 base64 编码，然后利用 data URI 插入被编码的图像，从而产生一个独立的 web 页面。图像编码和打包使得在分享时不需要再打包任何其他附件文件，可以将生成的 HTML 文件作为邮件附件，在公共文件夹中分享，或者在 web 服务中将其配置成单独的 HTML 文件。
-
-.footnote[
-[1] R Markdown Reference Guide: https://www.rstudio.org/links/r_markdown_reference_guide <br/>
-[2] R Markdown Cheatsheet: https://www.rstudio.org/links/r_markdown_cheat_sheet
-]
-
----
-class:
-
-# 输出类型
-
-.pull-left[
-- 报告
-
-    - 自带：多种输出格式：HTML, PDF（需 TeX 环境支持，例如：TeX Live），Word
-    - [rticles](https://github.com/rstudio/rticles)：多种 LaTeX 排版格式文档，其中 CTeX Documents 支持中文
-    - [tufte](https://github.com/rstudio/tufte)：Tufte 格式排版（3 种输出类型，中文支持），[示例](https://rstudio.github.io/tufte/)
-]
-
-.pull-right[
-- 幻灯片
-
-    - 自带：HTML（ioslide, Slidy），PDF（Beamer）
-    - [xaringan](https://github.com/yihui/xaringan)
-
-- 博客
-
-    - [blogdown](https://github.com/rstudio/blogdown)
-
-- 书籍
-
-    - [bookdown](https://bookdown.org/yihui/bookdown)
-]
-
-.footnote[
-[1] R Markdown Formats: https://rmarkdown.rstudio.com/formats.html  
-[2] R Markdown Gallery: https://rmarkdown.rstudio.com/gallery.html
 ]
 
 ---
@@ -609,6 +498,31 @@ knitr::include_graphics('images/jupyterlab.png')
 ---
 class: section, center, middle
 
+# Quarto
+
+---
+class:
+
+# Quarto
+
+.pull-left[
+Quarto 是一个开源的科技出版系统，相关特性如下：
+
+- 可以使用 Jupyter 笔记本或纯文本 Markdown 进行创作。
+- 使用 Python、R、Julia 和 Observable 创建动态内容。
+- 以 HTML、PDF、MS Word、ePub 等格式发布可复制、高质量的文章、演示文稿、仪表盘、网站、博客和数据。
+- 使用 Pandoc Markdown 进行编写，包括方程、引文、交叉引用、图像、面板、标注、高级布局等。
+]
+
+.pull-right[
+```{r, echo=F, out.width='66%', fig.align='center'}
+knitr::include_graphics('images/quarto.png')
+```
+]
+
+---
+class: section, center, middle
+
 # 版本控制
 
 ---
@@ -629,11 +543,11 @@ class:
 
 # 版本控制
 
-- 本地版本控制系统
+#### 本地版本控制系统
 
 许多人习惯用复制整个项目目录的方式来保存不同的版本，或许还会改名加上备份时间以示区别。 这么做唯一的好处就是简单，但是特别容易犯错。 有时候会混淆所在的工作目录，一不小心会写错文件或者覆盖意想外的文件。为了解决这个问题，人们很久以前就开发了许多种本地版本控制系统，大多都是采用某种简单的数据库来记录文件的历次更新差异。
 
-- 集中化的版本控制系统
+#### 集中化的版本控制系统
 
 接下来人们又遇到一个问题，如何让在不同系统上的开发者协同工作？ 于是，集中化的版本控制系统（Centralized Version Control Systems，简称 CVCS）应运而生。 这类系统，诸如 CVS、Subversion 以及 Perforce 等，都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。 多年以来，这已成为版本控制系统的标准做法。
 
@@ -644,11 +558,11 @@ class:
 
 # 版本控制
 
-- 集中化的版本控制系统
+#### 集中化的版本控制系统
 
 事分两面，有好有坏。 这么做最显而易见的缺点是中央服务器的单点故障。 如果宕机一小时，那么在这一小时内，谁都无法提交更新，也就无法协同工作。 如果中心数据库所在的磁盘发生损坏，又没有做恰当备份，毫无疑问你将丢失所有数据——包括项目的整个变更历史，只剩下人们在各自机器上保留的单独快照。 本地版本控制系统也存在类似问题，只要整个项目的历史记录被保存在单一位置，就有丢失所有历史更新记录的风险。
 
-- 分布式版本控制系统
+#### 分布式版本控制系统
 
 于是分布式版本控制系统（Distributed Version Control System，简称 DVCS）面世了。 在这类系统中，像 Git、Mercurial、Bazaar 以及 Darcs 等，客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。 这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。 因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。
 
@@ -696,8 +610,8 @@ GitHub 里面的项目可以透过标准的 Git 命令进行访问和操作。�
 ---
 class: thanks, center, middle
 
-# Thanks
+# 感谢倾听
 
 ![CC BY-NC-SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
-本作品采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可
+本作品采用 [CC BY-NC-SA 4.0](https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE) 授权

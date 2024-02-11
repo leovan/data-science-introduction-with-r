@@ -1,7 +1,7 @@
 ---
 title: "模型评估 & 超参数优化"
 subtitle: "Model Evaluation & Hyperparameter Optimization"
-author: "范叶亮 | Leo Van"
+author: "范叶亮"
 date: ""
 output:
   xaringan::moon_reader:
@@ -56,11 +56,16 @@ class:
 
 # 回归问题性能评估
 
-- 平均绝对误差（mean absolute error, MAE）
+#### 平均绝对误差（mean absolute error, MAE）
+
 $$\text{MAE} = \dfrac{1}{n} \sum_{i=1}^{n}{\left| f\left(x_i\right) - y_i \right|}$$
-- 平均绝对百分比误差（mean absolute percentage error, MAPE）
+
+#### 平均绝对百分比误差（mean absolute percentage error, MAPE）
+
 $$\text{MAPE} = \dfrac{1}{n} \sum_{i=1}^{n}{\left| \dfrac{f\left(x_i\right) - y_i}{y_i} \right|}$$
-- 均方误差（mean squared error, MSE）
+
+#### 均方误差（mean squared error, MSE）
+
 $$\text{MSE} = \dfrac{1}{n} \sum_{i=1}^{n}{\left( f\left(x_i\right) - y_i \right) ^ 2}$$
 其中，
 $SSE = \sum_{i=1}^{n} \left(f\left(x_i\right) - y_i\right)^2$，称之为残差平方和。
@@ -70,9 +75,12 @@ class:
 
 # 回归问题性能评估
 
-- 均方根误差（root-mean-square error, RMSE）
+#### 均方根误差（root-mean-square error, RMSE）
+
 $$\text{RMSE} = \sqrt{\text{MSE}} = \sqrt{\dfrac{1}{n} \sum_{i=1}^{n}{\left( f\left(x_i\right) - y_i \right) ^ 2}}$$
-- 误差标准差
+
+#### 误差标准差
+
 $$\sigma_{e} = \sqrt{\dfrac{1}{n} \sum_{i=1}^{n}{\left(e_i - \bar{e}\right) ^ 2}}$$
 其中，
 $e_i$表示使用的误差，
@@ -161,7 +169,7 @@ class:
 
 分类问题可以划分为两类：二分类问题和多分类问题，两种不同的分类问题的性能评估方法略有不同。
 
-- 误差和精度
+#### 误差和精度
 
 误差和精度是性能评估的两个最基本的指标。这两个指标具有很好的普适性，同时适用于二分类和多分类问题。类似于值预测问题中的各种误差，误差是指分类错误的样本数占样本总数的比例，相反的精度是指分类正确的样本数占样本总数的比例，误差的精度的定义如下：
 
@@ -178,7 +186,7 @@ class:
 
 # 分类问题性能评估
 
-- 准确率，召回率和 F Score
+#### 准确率，召回率和 F Score
 
 准确率，召回率和 F Score 是评价二分类问题的重要评价指标。二分类问题是日常生活中一种常见的分类问题，例如预测明天是否会下雨，一个贷款客户在未来是否会发生违约等等。对于二分类分为，其目标变量分为两种，我们将其标记为正样本（1）和负样本（0）。样本通过分类器的预测会出现 4 种不同情况，分别是：真正例（True Positive），即将正样本预测为了正样本；假正例（False Positive），即将负样本预测为了正样本；真反例（True Negative），即将负样本预测为了负样本；假反例（False Negative），即将正样本预测为了负样本。对于 4 种不同的情况，我们可以利用一个混淆矩阵来表示分类器的分类结果：
 
@@ -223,7 +231,7 @@ class:
 
 # 分类问题性能评估
 
-- F Score
+#### F Score
 
 相比于准确率和召回率，F Score 综合考虑了两个评价指标：
 
@@ -246,7 +254,7 @@ class:
 # 分类问题性能评估
 
 .pull-left[
-- ROC 和 AUC
+#### ROC 和 AUC
 
 ROC（Receiver Operation Characteristic，接收者操作特征）曲线，首先是由二战中的电子工程师和雷达工程师发明的，用来侦测战场上的敌军载具，后来逐渐被用于医学、无线电、生物学、犯罪心理学以及数据挖掘和机器学习领域。类似 P-R 曲线，但 ROC 曲线的横轴为“假正例率”（False Positive Rate， FPR），纵轴为“真正例率”（True Positive Rate，TPR）：
 
@@ -270,7 +278,7 @@ class:
 # 分类问题性能评估
 
 .pull-left[
-- ROC 和 AUC
+#### ROC 和 AUC
 
 在进行学习器的比较式，与 P-R 图相似，若一个学习器的 ROC 曲线被另一个学习器的曲线完全“包住”，则可断言后者的性能优于前者，若两个学习器的 ROC 曲线发生交叉，则难以一般性地断言两者孰优孰劣。此时如果一定要进行比较，则较为合理的依据是比较 ROC 曲线下的面积，及 AUC（Area Under ROC Curve）。
 
@@ -288,7 +296,7 @@ class:
 
 # 分类问题性能评估
 
-- 多分类 Log Loss
+#### 多分类 Log Loss
 
 $$\text{LogLoss} = - \dfrac{1}{n} \sum_{i=1}^{n} \sum_{j=1}^{m}{y_{i, j} \log \left(p_{i, j}\right)}$$
 
@@ -718,7 +726,7 @@ class:
 # 贝叶斯优化
 
 .pull-left[
-Grid Search 和 Randomized Search 可以让整个调参过程自动化，但它们无法从之前的调参结果中获取信息，可能会尝试很多无效的参数空间。而贝叶斯优化，会对上一次的评估结果进行追踪，建立一个概率模型，反应超参数在目标函数上表现的概率分布用于指导下一次的参数选择。贝叶斯优化适用于随机、非凸、不连续方程的优化。Sequential Model-Based Optimization (SMBO) 是贝叶斯优化更具体的表现形式，一般会有以下几个过程：
+Grid Search 和 Randomized Search 可以让整个调参过程自动化，但无法从之前的调参结果中获取信息，可能会尝试很多无效的参数空间。而贝叶斯优化会对上一次的评估结果进行追踪，建立一个概率模型，反应超参数在目标函数上表现的概率分布用于指导下一次的参数选择。贝叶斯优化适用于随机、非凸、不连续方程的优化。Sequential Model-Based Optimization (SMBO) 是贝叶斯优化更具体的表现形式，一般包含如下过程：
 
 1. 给定要搜索的超参数空间
 2. 定义一个目标函数用于评估优化
@@ -774,6 +782,19 @@ class:
 ```{r echo=F}
 library(mlr3learners)
 learner <- lrn("classif.rpart")
+
+learner_ps <- ParamSet$new(list(
+  ParamDbl$new("cp", lower = 0, upper = 1, default = 0.01),
+  ParamLgl$new("keep_model", default = FALSE),
+  ParamInt$new("maxcompete", lower = 0, upper = Inf, default = 4),
+  ParamInt$new("maxdepth", lower = 1, upper = 30, default = 30),
+  ParamInt$new("maxsurrogate", lower = 0, upper = Inf, default = 5),
+  ParamInt$new("minbucket", lower = 1, upper = Inf, default = 1),
+  ParamInt$new("minsplit", lower = 1, upper = Inf, default = 20),
+  ParamInt$new("surrogatestyle", lower = 0, upper = 1, default = 0),
+  ParamInt$new("usesurrogate", lower = 0, upper = 2, default = 2),
+  ParamInt$new("xval", lower = 0, upper = Inf, default = 10)
+))
 ```
 
 ```r
@@ -787,7 +808,7 @@ learner$param_set
 
 .grid-cell-2of3[
 ```{r echo=F}
-learner$param_set
+learner_ps
 ```
 ]
 ]
@@ -807,8 +828,8 @@ class:
 ```{r}
 library("paradox")
 tune_ps <- ParamSet$new(list(
-  ParamDbl$new("cp", lower = 0.001, upper = 0.1),
-  ParamInt$new("minsplit", lower = 1, upper = 10)
+  ParamDbl$new("cp", lower = 0.001, upper = 0.1, default = 0.01),
+  ParamInt$new("minsplit", lower = 1, upper = 10, default = 5)
 ))
 tune_ps
 ```
@@ -932,10 +953,10 @@ learner$train(task)
 ---
 class: thanks, center, middle
 
-# Thanks
+# 感谢倾听
 
 ![CC BY-NC-SA 4.0](assets/by-nc-sa.svg)
 
-本作品采用 [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可
+本作品采用 [**CC BY-NC-SA 4.0**](https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE) 授权
 
-Copyright © [**范叶亮 | Leo Van**](https://leovan.me), All Rights Reserved.
+版权所有 © [**范叶亮**](https://leovan.me)

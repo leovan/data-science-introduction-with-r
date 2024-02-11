@@ -1,19 +1,28 @@
 /* 字体 */
 body {
-  font-family: Georgia, "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "Noto Serif CJK SC", "Noto Serif CJK TC", "Source Han Serif SC", "Source Han Serif CN", source-han-serif-sc, "Source Han Serif TC", "Source Han Serif TW", source-han-serif-tc, "Source Han Serif", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+  font-family: Palatino, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Noto Serif CJK SC', 'Noto Serif CJK TC', 'Source Han Serif SC', 'Source Han Serif CN', source-han-serif-sc, 'Source Han Serif TC', 'Source Han Serif TW', source-han-serif-tc, 'Source Han Serif', 'Songti SC', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Yanone Kaffeesatz", Georgia, "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "Noto Serif CJK SC", "Noto Serif CJK TC", "Source Han Serif SC", "Source Han Serif CN", source-han-serif-sc, "Source Han Serif TC", "Source Han Serif TW", source-han-serif-tc, "Source Han Serif", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz', Palatino, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Noto Serif CJK SC', 'Noto Serif CJK TC', 'Source Han Serif SC', 'Source Han Serif CN', source-han-serif-sc, 'Source Han Serif TC', 'Source Han Serif TW', source-han-serif-tc, 'Source Han Serif', 'Songti SC', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif;
   font-weight: bold;
 }
 
+h4, h5, h6 {
+  font-family: Palatino, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Noto Serif CJK SC', 'Noto Serif CJK TC', 'Source Han Serif SC', 'Source Han Serif CN', source-han-serif-sc, 'Source Han Serif TC', 'Source Han Serif TW', source-han-serif-tc, 'Source Han Serif', 'Songti SC', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif;
+  font-weight: bold;
+}
+
+a {
+  font-family: 'PT Sans Narrow', Palatino, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Noto Serif CJK SC', 'Noto Serif CJK TC', 'Source Han Serif SC', 'Source Han Serif CN', source-han-serif-sc, 'Source Han Serif TC', 'Source Han Serif TW', source-han-serif-tc, 'Source Han Serif', 'Songti SC', STSong, 'AR PL New Sung', 'AR PL SungtiL GB', NSimSun, SimSun, 'TW\-Sung', 'WenQuanYi Bitmap Song', 'AR PL UMing CN', 'AR PL UMing HK', 'AR PL UMing TW', 'AR PL UMing TW MBE', PMingLiU, MingLiU, serif;
+}
+
 .remark-code, .remark-inline-code {
-  font-family: Iosevka, "Sarasa Mono SC", "Sarasa Mono TC", Consolas, "Lucida Console", Menlo, Monaco, "Andale Mono", "Ubuntu Mono", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", monospace;
+  font-family: Iosevka, 'Sarasa Mono SC', 'Sarasa Mono TC', Consolas, 'Lucida Console', Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', 'Kaiti SC', STKaiti, 'AR PL UKai CN', 'AR PL UKai HK', 'AR PL UKai TW', 'AR PL UKai TW MBE', 'AR PL KaitiM GB', KaiTi, KaiTi_GB2312, DFKai-SB, 'TW\-Kai', monospace;
 }
 
 .caption, .footnote, tfoot {
-  font-family: Georgia, "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  font-family: Palatino, 'Palatino Linotype', 'Palatino LT Std', Georgia, 'Latin Modern Roman', 'Linux Libertine', 'Liberation Serif', 'Kaiti SC', STKaiti, 'AR PL UKai CN', 'AR PL UKai HK', 'AR PL UKai TW', 'AR PL UKai TW MBE', 'AR PL KaitiM GB', KaiTi, KaiTi_GB2312, DFKai-SB, 'TW\-Kai', serif;
   font-size: 0.9em;
 }
 
@@ -23,22 +32,29 @@ h1 {
 }
 
 /* 背景 */
-.logo {
-  background-image: url(../assets/avatar.png);
+.project-logo {
+  background-image: url(../assets/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 66px;
+  opacity: 0.3;
+  bottom: 80px;
   right: 80px;
-  width: 66px;
-  height: 66px;
+  width: 256px;
+  height: 256px;
   z-index: 0;
 }
 
-.title-slide {
-  background: url("../assets/slide-cover-background.png");
-  background-size: 100% 100%;
-  background-color: #ffffff;
+.content-logo {
+  background-image: url(../assets/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 70px;
+  height: 70px;
+  z-index: 0;
 }
 
 /* 页码 */
@@ -54,11 +70,31 @@ h1 {
 .title-slide h2,
 .title-slide h3 {
   color: #000000;
-  line-height: 0.6em;
+  height: 0.5em;
+  line-height: 0.5em;
 }
 
 .title-slide h1 {
-  margin-top: 200px;
+  margin-top: 120px;
+}
+
+.title h1 {
+  font-size: 45px;
+}
+
+.project-title h1,
+.project-subtitle h1 {
+  color: #000000;
+  height: 0.6em;
+  line-height: 0.6em;
+}
+
+.project-title h1 {
+  margin-top: 60px;
+}
+
+.project-subtitle h1 {
+  margin-top: 20px;
 }
 
 /* 目录 */
@@ -169,6 +205,11 @@ a, a > code {
   bottom: 3em;
   padding-right: 4em;
   font-size: 90%;
+}
+
+h4, h5 {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /* 垂直布局 */

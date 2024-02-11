@@ -1,7 +1,7 @@
 ---
 title: "分类算法（上）"
 subtitle: "Classification Algorithms - Part 1"
-author: "范叶亮 | Leo Van"
+author: "范叶亮"
 date: ""
 output:
   xaringan::moon_reader:
@@ -287,10 +287,6 @@ ggplot(df, aes(x=x, y=y)) +
 ]
 ]
 
-???
-
-从图可以看出，当 $p=0.5$ 时熵最大，也就是说抛一枚硬币，当正反两面朝上的概率相同时，熵最大，也就是说系统最复杂。对于公式，当取以 2 为底的对数时，熵的单位为比特（bit），当取自然对数时，熵的单位为纳特（nat），当取以 10 为底的对数时，熵的单位为哈特（hart）。
-
 ---
 class:
 
@@ -464,10 +460,6 @@ class:
 </pre>
 ]
 
-???
-
-CART 算法是由 Breiman 等人提出的一种决策树学习方法。CART 算法在生成决策树的过程中，采用 Gini 指数进行特征选择。
-
 ---
 class:
 
@@ -603,10 +595,10 @@ dev.off()
 ---
 class: thanks, center, middle
 
-# Thanks
+# 感谢倾听
 
 ![CC BY-NC-SA 4.0](assets/by-nc-sa.svg)
 
-本作品采用 [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可
+本作品采用 [**CC BY-NC-SA 4.0**](https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE) 授权
 
-Copyright © [**范叶亮 | Leo Van**](https://leovan.me), All Rights Reserved.
+版权所有 © [**范叶亮**](https://leovan.me)

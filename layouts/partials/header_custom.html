@@ -12,5 +12,11 @@
 {{ partial "google_adsense.html" . }}
 {{ end }}
 
+{{ if .HasShortcode "pdf-viewer" }}
+<link rel="stylesheet" type="text/css" href="/css/pdf-viewer.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/web/pdf_viewer.min.css">
+<script src="//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/build/pdf.min.mjs" type="module"></script>
+{{ end }}
+
 <link rel="stylesheet" type="text/css" href="{{ "/css/reset.css" | relURL }}">
 <link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">

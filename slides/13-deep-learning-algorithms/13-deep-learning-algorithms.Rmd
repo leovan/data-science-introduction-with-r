@@ -1,7 +1,7 @@
 ---
 title: "深度学习算法"
 subtitle: "Deep Learning Algorithms"
-author: "范叶亮 | Leo Van"
+author: "范叶亮"
 date: ""
 output:
   xaringan::moon_reader:
@@ -938,10 +938,11 @@ $\prod_{j=k+1}^{t}{f'_H \left(h_{j-1}\right) \boldsymbol{W}_{HH}}$ 趋近于无�
 ]
 
 .pull-right[
-```{r, echo=F, message=F, dpi=300, fig.height=3, fig.width=4}
+```{r, echo=F, message=F, warning=F, dpi=300, fig.height=3, fig.width=4}
 library(tidyverse)
 library(showtext)
-font_add('Source Han Sans SC', 'SourceHanSans.ttc')
+
+showtext_auto()
 
 tanhd <- deriv(y ~ tanh(x), 'x', func = T)
 x = seq(-3, 3, by = 0.01)
@@ -1123,10 +1124,10 @@ class:
 ---
 class: thanks, center, middle
 
-# Thanks
+# 感谢倾听
 
 ![CC BY-NC-SA 4.0](assets/by-nc-sa.svg)
 
-本作品采用 [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可
+本作品采用 [**CC BY-NC-SA 4.0**](https://github.com/leovan/data-science-introduction-with-r/blob/main/LICENSE) 授权
 
-Copyright © [**范叶亮 | Leo Van**](https://leovan.me), All Rights Reserved.
+版权所有 © [**范叶亮**](https://leovan.me)

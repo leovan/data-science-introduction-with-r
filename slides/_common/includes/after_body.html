@@ -28,8 +28,15 @@ $(document).ready(function() {
       ':not(.content)' +
       ':not(.thanks)'
     ).forEach(el => {
-      el.innerHTML += '<a target="_black" href="https://leovan.me"><div class="logo"></div></a>';
+      el.innerHTML += '<a target="_black" href="https://ds-r.leovan.tech"><div class="content-logo"></div></a>';
     });
+
+  document.querySelectorAll(
+    '.title-slide'
+  ).forEach(el => {
+    el.innerHTML = '<div class="project-title"><h1>R 语言数据科学导论</h1></div><div class="project-subtitle"><h1>Data Science Introduction with R</h1></div>' + el.innerHTML;
+    el.innerHTML += '<div class="project-logo"></div>';
+  });
 
   $(".convert-emoji").each(function() {
     var original = $(this).html();

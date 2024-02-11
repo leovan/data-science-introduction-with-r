@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # go to slides images directory
-cd ../../static/images/lecture
+cd $(dirname $(dirname $(dirname $(dirname "$0"))))
+cd static/images/lecture
 
 # resize all images
 for image in ./*.png
