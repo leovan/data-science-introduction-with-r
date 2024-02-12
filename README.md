@@ -1,4 +1,4 @@
-# R 语言数据科学导论 <img src="static/images/data-science-introduction-with-r.png" align="right" alt="logo" height="100" style="border: none; float: right;">
+# R 语言数据科学导论 <img src="static/images/data-science-introduction-with-r.png" align="right" alt="logo" height="100" style="border: none; float: right; height: 100px;">
 
 ![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-r.svg)
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
@@ -24,3 +24,5 @@
 ## 授权
 
 本项目遵守 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
+
+版权所有 &copy; 2019-2024，<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>

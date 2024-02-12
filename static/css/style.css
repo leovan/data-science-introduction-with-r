@@ -1130,6 +1130,10 @@ div.code-toolbar > .toolbar {
   width: 100%;
 }
 
+.pdf-viewer-controls-container a {
+  box-shadow: none;
+}
+
 .pdf-slide-viewer {
   display: block;
 }
