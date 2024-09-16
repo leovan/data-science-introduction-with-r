@@ -1,16 +1,32 @@
 baseURL: "https://ds-r.leovan.tech/"
+enableEmoji: true
+hasCJKLanguage: true
+ignoreFiles:
+  - \.Rmarkdown$
+  - \.Rmd$"
+  - \.knit\.md$
+  - \.utf8\.md$
+  - _files$
+  - _cache$
+  - \.txt$
+  - \.csv$
+  - \.tsv$
+  - \.tgz$
+  - \.tar$
+  - \.gz$
+  - \.zip$
+  - \.npz$
 languageCode: "zh-cn"
 title: "R 语言数据科学导论 | Data Science Introduction with R"
-googleAnalytics: "G-MCPZ7NTLEX"
-ignoreFiles: [
-  "\\.Rmarkdown$", "\\.Rmd$", "\\.knit\\.md$", "\\.utf8\\.md$",
-  "_files$", "_cache$", "\\.txt$", "\\.csv$", "\\.tsv$",
-  "\\.tgz$", "\\.tar$", "\\.gz$", "\\.zip$", "\\.npz$"]
-hasCJKLanguage: true
-enableEmoji: true
 rssLimit: 100
 
-disableKinds: ["taxonomy", "term"]
+services:
+  googleAnalytics:
+    ID: "G-MCPZ7NTLEX"
+
+disableKinds:
+  - "taxonomy"
+  - "term"
 
 permalinks:
   lecture: "/lecture/:slug/"

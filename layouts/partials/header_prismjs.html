@@ -1,3 +1,0 @@
-{{ if and (not .Params.disable_highlight) (in (string .Content) "</code>") }}
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/themes/prism.min.css">
-{{ end }}
