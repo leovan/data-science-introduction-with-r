@@ -31,14 +31,17 @@ MathJax = {
 <script src="//cdn.jsdelivr.net/npm/mathjax@{{ $.Site.Params.mathjaxVersion }}/es5/tex-chtml.js" crossorigin></script>
 {{ end }}
 
-{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</pre>") }}
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/prismjs@{{ $.Site.Params.prismjsVersion }}/themes/prism.min.css">
-{{ end }}
-
 {{ if and (and (and (not .Params.disable_adsense) (ne .Kind "404")) (not .IsHome)) .Content }}
 {{ with $.Site.Params.googleAdsense }}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
 {{ end }}
+{{ end }}
+
+<link rel="stylesheet" type="text/css" href="{{ "/css/reset.css" | relURL }}">
+<link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">
+
+{{ if and (and (and (not .Params.disable_prismjs) (ne .Kind "404")) (not .IsHome)) (in (string .Content) "</code>") }}
+<link rel="stylesheet" type="text/css" href="{{ "/css/highlight.css" | relURL }}">
 {{ end }}
 
 {{ if .HasShortcode "pdf-viewer" }}
@@ -46,6 +49,3 @@ MathJax = {
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/web/pdf_viewer.min.css">
 <script src="//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/build/pdf.min.mjs" type="module"></script>
 {{ end }}
-
-<link rel="stylesheet" type="text/css" href="{{ "/css/reset.css" | relURL }}">
-<link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | relURL }}">

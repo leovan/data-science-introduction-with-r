@@ -1,5 +1,5 @@
 function getTheme() {
-  theme = Cookies.get("theme", {path: "/"});
+  theme = Cookies.get("theme", { path: "/" });
 
   if (theme == "dark") {
     theme = "dark";
@@ -11,12 +11,12 @@ function getTheme() {
 }
 
 function setTheme(theme) {
-  Cookies.set("theme", theme, {path: "/"});
+  Cookies.set("theme", theme, { path: "/" });
 
   if (theme == "dark") {
-    document.body.classList.add('dark');
+    document.body.classList.add("dark");
   } else {
-    document.body.classList.remove('dark');
+    document.body.classList.remove("dark");
   }
 }
 

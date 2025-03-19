@@ -38,98 +38,98 @@
 </div>
 
 <script type="module" type="text/javascript">
-(function(d) {
-  var url = '{{ $url }}';
-  var pdfjsLib = window['pdfjsLib'];
-  pdfjsLib.GlobalWorkerOptions.workerSrc = '//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/build/pdf.worker.mjs';
+  (function(d) {
+    var url = '{{ $url }}';
+    var pdfjsLib = window['pdfjsLib'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '//cdn.jsdelivr.net/npm/pdfjs-dist@{{ $.Site.Params.pdfjsVersion }}/build/pdf.worker.mjs';
 
-  var pageNum = {{ $page }};
-  var pageRendering = false;
-  var pagePendingNum = null;
-  var scale = 1.5;
-  var canvas = d.getElementById('pdf-viewer-canvas-{{ $pdf_viewer_index }}');
-  var context = canvas.getContext('2d');
-  var loadingWrapper = d.getElementById('pdf-viewer-loading-wrapper-{{ $pdf_viewer_index }}');
-  var controlsContainer = d.getElementById('pdf-viewer-controls-container-{{ $pdf_viewer_index }}');
-  var prevPage = d.getElementById('pdf-viewer-button-prev-page-{{ $pdf_viewer_index }}');
-  var nextPage = d.getElementById('pdf-viewer-button-next-page-{{ $pdf_viewer_index }}');
+    var pageNum = {{ $page }};
+    var pageRendering = false;
+    var pagePendingNum = null;
+    var scale = 1.5;
+    var canvas = d.getElementById('pdf-viewer-canvas-{{ $pdf_viewer_index }}');
+    var context = canvas.getContext('2d');
+    var loadingWrapper = d.getElementById('pdf-viewer-loading-wrapper-{{ $pdf_viewer_index }}');
+    var controlsContainer = d.getElementById('pdf-viewer-controls-container-{{ $pdf_viewer_index }}');
+    var prevPage = d.getElementById('pdf-viewer-button-prev-page-{{ $pdf_viewer_index }}');
+    var nextPage = d.getElementById('pdf-viewer-button-next-page-{{ $pdf_viewer_index }}');
 
-  function showContent() {
-    loadingWrapper.style.display = 'none';
-    canvas.style.display = 'block';
-    controlsContainer.style.display = 'flex';
-  }
-
-  function showLoader() {
-    loadingWrapper.style.display = 'flex';
-    canvas.style.display = 'none';
-    controlsContainer.style.display = 'none';
-  }
-
-  showLoader();
-
-  pdfjsLib.getDocument(url).promise.then(function(pdf) {
-    var pdfNumPages = pdf.numPages;
-
-    if (pageNum > pdfNumPages) {
-      pageNum = pdfNumPages;
+    function showContent() {
+      loadingWrapper.style.display = 'none';
+      canvas.style.display = 'block';
+      controlsContainer.style.display = 'flex';
     }
 
-    d.getElementById('pdf-viewer-total-page-{{ $pdf_viewer_index }}').textContent = pdfNumPages;
-    d.getElementById('pdf-viewer-button-prev-page-{{ $pdf_viewer_index }}').addEventListener('click', onPrevPage);
-    d.getElementById('pdf-viewer-button-next-page-{{ $pdf_viewer_index }}').addEventListener('click', onNextPage);
+    function showLoader() {
+      loadingWrapper.style.display = 'flex';
+      canvas.style.display = 'none';
+      controlsContainer.style.display = 'none';
+    }
 
-    renderPage(pageNum);
+    showLoader();
 
-    function renderPage(pageNum) {
-      pdf.getPage(pageNum).then(function(page) {
-        var viewport = page.getViewport({scale: scale});
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+    pdfjsLib.getDocument(url).promise.then(function(pdf) {
+      var pdfNumPages = pdf.numPages;
 
-        var renderContext = {
-          canvasContext: context,
-          viewport: viewport
-        };
-        var renderTask = page.render(renderContext);
+      if (pageNum > pdfNumPages) {
+        pageNum = pdfNumPages;
+      }
 
-        renderTask.promise.then(function() {
-          pageRendering = false;
-          showContent();
+      d.getElementById('pdf-viewer-total-page-{{ $pdf_viewer_index }}').textContent = pdfNumPages;
+      d.getElementById('pdf-viewer-button-prev-page-{{ $pdf_viewer_index }}').addEventListener('click', onPrevPage);
+      d.getElementById('pdf-viewer-button-next-page-{{ $pdf_viewer_index }}').addEventListener('click', onNextPage);
 
-          if (pagePendingNum !== null) {
-            renderPage(pagePendingNum)
-            pagePendingNum = null;
-          }
+      renderPage(pageNum);
+
+      function renderPage(pageNum) {
+        pdf.getPage(pageNum).then(function(page) {
+          var viewport = page.getViewport({scale: scale});
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          var renderContext = {
+            canvasContext: context,
+            viewport: viewport
+          };
+          var renderTask = page.render(renderContext);
+
+          renderTask.promise.then(function() {
+            pageRendering = false;
+            showContent();
+
+            if (pagePendingNum !== null) {
+              renderPage(pagePendingNum)
+              pagePendingNum = null;
+            }
+          });
         });
-      });
 
-      d.getElementById('pdf-viewer-current-page-{{ $pdf_viewer_index }}').textContent = pageNum;
-    }
-
-    function queueRenderPage(pageNum) {
-      if (pageRendering) {
-        pagePendingNum = pageNum;
-      } else {
-        renderPage(pageNum);
+        d.getElementById('pdf-viewer-current-page-{{ $pdf_viewer_index }}').textContent = pageNum;
       }
-    }
 
-    function onPrevPage() {
-      if (pageNum > 1) {
-        pageNum--;
-        queueRenderPage(pageNum);
+      function queueRenderPage(pageNum) {
+        if (pageRendering) {
+          pagePendingNum = pageNum;
+        } else {
+          renderPage(pageNum);
+        }
       }
-    }
 
-    function onNextPage() {
-      if (pageNum < pdfNumPages) {
-        pageNum++;
-        queueRenderPage(pageNum);
+      function onPrevPage() {
+        if (pageNum > 1) {
+          pageNum--;
+          queueRenderPage(pageNum);
+        }
       }
-    }
-  }, function(reason) {
-    console.error(reason);
-  });
-})(document);
+
+      function onNextPage() {
+        if (pageNum < pdfNumPages) {
+          pageNum++;
+          queueRenderPage(pageNum);
+        }
+      }
+    }, function(reason) {
+      console.error(reason);
+    });
+  })(document);
 </script>

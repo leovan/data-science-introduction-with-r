@@ -75,13 +75,12 @@ params:
   lazysizesVersion: "5.3.2"
   mathjaxVersion: "3.2.2"
   jsCookieVersion: "3.0.5"
-  pdfjsVersion: "4.0.379"
-  prismjsVersion: "1.29.0"
+  pdfjsVersion: "5.0.375"
   vanillaBackToTopVersion: "latest"
 
 markup:
   highlight:
-    codeFences: false
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true

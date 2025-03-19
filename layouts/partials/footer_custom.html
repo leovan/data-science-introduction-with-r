@@ -1,23 +1,26 @@
-<script src="/js/no-highlight.js"></script>
-
-{{ partial "footer_prismjs.html" . }}
-
-<script src='//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js'></script>
-
-<script async src="/js/fix-toc.js"></script>
-<script async src="/js/center-img.js"></script>
-<script async src="/js/right-quote.js"></script>
-<script async src="/js/fix-footnote.js"></script>
-<script async src="/js/external-link.js"></script>
-<script async src="/js/alt-title.js"></script>
-<script src="/js/math-code.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@{{ $.Site.Params.jsCookieVersion }}/dist/js.cookie.min.js"></script>
 <script src="/js/toggle-theme.js"></script>
 
+{{ partial "footer_highlight.html" . }}
+
+{{ if not .IsHome }}
+<script src="/js/math-code.js"></script>
+{{ end }}
+
+{{ if or (eq .Kind "404") (and (not .IsHome) .Content) }}
+<script async src="/js/center-img.js"></script>
+<script async src="/js/right-quote.js"></script>
+<script async src="/js/external-link.js"></script>
+<script async src="/js/alt-title.js"></script>
+{{ end }}
+
+{{ if and (not .IsHome) .Content }}
 <script src="//cdn.jsdelivr.net/npm/lazysizes@{{ $.Site.Params.lazysizesVersion }}/lazysizes.min.js"></script>
+{{ end }}
 
 <script src="//cdn.jsdelivr.net/npm/vanilla-back-to-top@{{ $.Site.Params.vanillaBackToTopVersion }}/dist/vanilla-back-to-top.min.js"></script>
 <script>
-addBackToTop({
-  diameter: 48
-});
+  addBackToTop({
+    diameter: 48,
+  });
 </script>
