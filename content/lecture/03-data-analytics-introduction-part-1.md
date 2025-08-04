@@ -12,4 +12,4 @@ tags:
   - 数据转换和规整
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/03-data-analytics-introduction-part-1.pdf" title="03 - 数据分析基础 (上)">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/03-data-analytics-introduction-part-1.pdf" title="03 - 数据分析基础 (上)">}}

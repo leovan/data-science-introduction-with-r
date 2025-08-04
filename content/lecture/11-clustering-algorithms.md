@@ -12,4 +12,4 @@ tags:
   - 基于密度的聚类
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/11-clustering-algorithms.pdf" title="11 - 聚类算法">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/11-clustering-algorithms.pdf" title="11 - 聚类算法">}}

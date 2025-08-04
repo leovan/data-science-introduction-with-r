@@ -12,4 +12,4 @@ tags:
   - 循环神经网络
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/13-deep-learning-algorithms.pdf" title="13 - 深度学习算法">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/13-deep-learning-algorithms.pdf" title="13 - 深度学习算法">}}

@@ -11,4 +11,4 @@ tags:
   - 决策树
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/09-classification-algorithms-part-1.pdf" title="09 - 分类算法（上）">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/09-classification-algorithms-part-1.pdf" title="09 - 分类算法（上）">}}

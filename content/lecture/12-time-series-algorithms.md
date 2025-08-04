@@ -13,4 +13,4 @@ tags:
   - Prophet
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/12-time-series-algorithms.pdf" title="12 - 时间序列算法">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/12-time-series-algorithms.pdf" title="12 - 时间序列算法">}}

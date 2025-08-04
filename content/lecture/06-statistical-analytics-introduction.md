@@ -12,4 +12,4 @@ tags:
   - 线性回归
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/06-statistical-analytics-introduction.pdf" title="06 - 统计分析基础">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/06-statistical-analytics-introduction.pdf" title="06 - 统计分析基础">}}

@@ -11,4 +11,4 @@ tags:
   - RStudio
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/02-r-language-introduction.pdf" title="02 - R 语言简介">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/02-r-language-introduction.pdf" title="02 - R 语言简介">}}

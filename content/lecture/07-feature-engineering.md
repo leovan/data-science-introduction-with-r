@@ -15,4 +15,4 @@ tags:
   - 监控
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/07-feature-engineering.pdf" title="07 - 特征工程">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/07-feature-engineering.pdf" title="07 - 特征工程">}}

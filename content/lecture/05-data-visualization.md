@@ -12,4 +12,4 @@ tags:
   - echarts4r
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/05-data-visualization.pdf" title="05 - 数据可视化">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/05-data-visualization.pdf" title="05 - 数据可视化">}}

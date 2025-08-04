@@ -13,4 +13,4 @@ tags:
   - Stacking
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/10-classification-algorithms-part-2.pdf" title="10 - 分类算法（下）">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/10-classification-algorithms-part-2.pdf" title="10 - 分类算法（下）">}}

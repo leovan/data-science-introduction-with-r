@@ -12,4 +12,4 @@ tags:
   - CRISP-DM
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/01-data-science-introduction.pdf" title="01 - 数据科学简介">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/01-data-science-introduction.pdf" title="01 - 数据科学简介">}}

@@ -12,4 +12,4 @@ tags:
   - quarto
 ---
 
-{{< pdf-viewer url="https://ds-r-cdn.leovan.tech/lecture/14-reproducible-research.pdf" title="13 - 可重复性研究">}}
+{{< pdf-viewer url="https://r2.leovan.tech/ds-r/lecture/14-reproducible-research.pdf" title="13 - 可重复性研究">}}
