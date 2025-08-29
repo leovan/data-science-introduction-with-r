@@ -1,9 +1,3 @@
-# Hugo
-blogdown
-public
-/resources/_gen
-.hugo_build.lock
-
 # R
 .Rhistory
 .Rproj.user
@@ -36,5 +30,4 @@ public
 !/slides/_common/**
 
 # Others
-base/fonts
 *.h5
