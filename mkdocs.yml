@@ -1,0 +1,140 @@
+# Website information
+site_name: R 语言数据科学导论
+site_url: https://ds-r.leovan.tech
+site_author: 范叶亮 | Leo Van
+site_description: R 语言数据科学导论 | Data Science Introduction with R
+
+# Repository
+repo_name: leovan/data-science-introduction-with-r
+repo_url: https://github.com/leovan/data-science-introduction-with-r
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: 版权所有 &copy; 2019-2025，<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>
+
+# Navigation
+nav:
+  - 主页: index.md
+  - 讲义:
+    - 数据科学简介: lecture/01-data-science-introduction.md
+    - R 语言简介: lecture/02-r-language-introduction.md
+    - 数据分析基础（上）: lecture/03-data-analytics-introduction-part-1.md
+    - 数据分析基础（下）: lecture/04-data-analytics-introduction-part-2.md
+    - 数据可视化: lecture/05-data-visualization.md
+    - 统计分析基础: lecture/06-statistical-analytics-introduction.md
+    - 特征工程: lecture/07-feature-engineering.md
+    - 模型评估 & 超参数优化: lecture/08-model-evaluation-and-hyperparameter-optimization.md
+    - 分类算法（上）: lecture/09-classification-algorithms-part-1.md
+    - 分类算法（下）: lecture/10-classification-algorithms-part-2.md
+    - 聚类算法: lecture/11-clustering-algorithms.md
+    - 时间序列算法: lecture/12-time-series-algorithms.md
+    - 深度学习算法: lecture/13-deep-learning-algorithms.md
+    - 可重复性研究: lecture/14-reproducible-research.md
+  - 其他:
+    - 开发环境安装配置手册: others/01-ide-installation-manual.md
+
+# Theme
+theme:
+  name: material
+  include_search_page: false
+  search_index_only: true
+  language: zh
+  features:
+    - content.code.copy
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 暗黑
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/white-balance-sunny
+        name: 明亮
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: images/data-science-introduction-with-r.png
+  logo: images/data-science-introduction-with-r.png
+
+# Plugins
+plugins:
+  - search:
+      lang: en
+
+# Extra
+extra:
+  social:
+    - icon: material/home
+      link: https://leovan.me
+      name: 个人主页
+    - icon: material/github
+      link: https://github.com/leovan
+      name: Github
+  analytics:
+    provider: google
+    property: G-MCPZ7NTLEX
+extra_css:
+  - css/table.css
+
+# Markdown extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: leovan
+      repo: duckling-chinese
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

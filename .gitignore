@@ -1,10 +1,10 @@
-# R Blogdown
+# Hugo
 blogdown
 public
 /resources/_gen
 .hugo_build.lock
 
-# R Common
+# R
 .Rhistory
 .Rproj.user
 .RData
@@ -22,15 +22,12 @@ public
 # JetBrains
 .idea
 
-# system
+# System
 .DS_Store
 *.log
 *.dump
 
-# base
-base/fonts
-
-# slide source
+# Slide
 /slides/**/*_cache
 /slides/**/*_files
 /slides/**/libs
@@ -38,5 +35,6 @@ base/fonts
 /slides/**/*.html
 !/slides/_common/**
 
-# others
+# Others
+base/fonts
 *.h5
