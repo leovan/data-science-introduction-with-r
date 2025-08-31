@@ -1,4 +1,10 @@
-# R 语言数据科学导论
+# R 语言数据科学导论 <img src="images/data-science-introduction-with-r.png" align="right" alt="logo" height="100" style="border: none; float: right; height: 100px;">
+
+![Release](https://img.shields.io/github/release/leovan/data-science-introduction-with-r.svg)
+![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)
+![Issues](https://img.shields.io/github/issues/leovan/data-science-introduction-with-r.svg)
+
+---
 
 ## 简介
 
