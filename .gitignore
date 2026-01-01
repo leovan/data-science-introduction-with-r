@@ -25,7 +25,7 @@
 /slides/**/*_cache
 /slides/**/*_files
 /slides/**/_extensions
-/slides/**/images
+/slides/**/theme
 /slides/**/tmp
 /slides/**/*.html
 /slides/**/*.pdf
