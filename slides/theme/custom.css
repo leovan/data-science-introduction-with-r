@@ -1,0 +1,5 @@
+/* Logo */
+.reveal .custom-title-logo,
+.reveal .custom-slide-logo {
+  content: url(logo.png);
+}

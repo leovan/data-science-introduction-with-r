@@ -1,0 +1,31 @@
+name: Build and Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Build
+        run: |
+          pip install -r requirements.txt
+          zensical build --clean
+
+      - name: Deploy
+        run: npx edgeone pages deploy site -n ds-r-site -t ${{ secrets.EDGEONE_PAGES_API_TOKEN }}

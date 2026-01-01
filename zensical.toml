@@ -1,0 +1,169 @@
+[project]
+
+# Information
+site_name = "R 语言数据科学导论"
+site_description = "R 语言数据科学导论 | Data Science Introduction with R"
+site_author = "范叶亮 | Leo Van"
+site_url = "https://ds-r.leovan.tech"
+copyright = """
+版权所有 &copy; 2019-2026，<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>
+"""
+
+# Repository
+repo_name = "leovan/data-science-introduction-with-r"
+repo_url = "https://github.com/leovan/data-science-introduction-with-r"
+
+# Javascript
+extra_javascript = [
+  "javascripts/mathjax.js",
+  "https://cdn.jsdmirror.com/npm/mathjax@4/tex-chtml.js",
+  "https://cdn.jsdmirror.com/npm/tablesort@5.7.0/dist/tablesort.min.js",
+  "javascripts/tablesort.js",
+]
+
+# Style
+extra_css = [
+  "stylesheets/extra.css",
+]
+
+# Navigation
+nav = [
+  { "主页" = "index.md" },
+  { "讲义" = [
+    "slides/01-data-science-introduction.md",
+    "slides/02-r-language-introduction.md",
+    "slides/03-data-analytics-introduction-part-1.md",
+    "slides/04-data-analytics-introduction-part-2.md",
+    "slides/05-data-visualization.md",
+    "slides/06-statistical-analytics-introduction.md",
+    "slides/07-feature-engineering.md",
+    "slides/08-model-evaluation-and-hyperparameter-optimization.md",
+    "slides/09-classification-algorithms-part-1.md",
+    "slides/10-classification-algorithms-part-2.md",
+    "slides/11-clustering-algorithms.md",
+    "slides/12-time-series-algorithms.md",
+    "slides/13-deep-learning-algorithms.md",
+    "slides/14-reproducible-research.md",
+  ] },
+  { "其他" = [
+    "others/01-ide.md",
+    "others/02-library.md",
+  ] },
+]
+
+# Theme
+[project.theme]
+
+favicon = "images/data-science-introduction-with-r.png"
+logo = "images/data-science-introduction-with-r.png"
+
+language = "zh"
+
+features = [
+  "announce.dismiss",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  "toc.follow",
+  "search.highlight",
+]
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "lucide/sun"
+toggle.name = "切换至暗黑模式"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "lucide/moon"
+toggle.name = "切换至亮色模式"
+
+[project.theme.icon]
+repo = "fontawesome/brands/git-alt"
+
+# Extra
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/leovan"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/house"
+link = "https://leovan.me"
+
+[project.extra.analytics]
+provider = "google"
+property = "G-MCPZ7NTLEX"
+
+# Extensions
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.tables]
+
+[project.markdown_extensions.toc]
+permalink =  true
+toc_depth = 3
+
+[project.markdown_extensions.toc.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
+
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+
+[project.markdown_extensions.pymdownx.blocks.caption]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji" 
+emoji_generator = "zensical.extensions.emoji.to_svg"
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.progressbar]
+[project.markdown_extensions.pymdownx.snippets]
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+
+[project.markdown_extensions.pymdownx.tabbed.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
+
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+
+[project.markdown_extensions.pymdownx.tilde]

@@ -1,3 +1,8 @@
+## [1.3.0](https://github.com/leovan/data-science-introduction-with-r/compare/v1.2.0...v1.3.0) (2026-01-01)
+
+- Render slides with Quarto.
+- Render website with Zensical.
+
 ## [1.2.0](https://github.com/leovan/data-science-introduction-with-r/compare/v1.1.0...v1.2.0) (2024-02-11)
 
 - Remove R Markdown and add quarto to reproducible research chapter.

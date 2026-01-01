@@ -4,14 +4,14 @@
 .RData
 .Ruserdata
 
-# VS Code
-.vscode
-
 # Python
 *.pyd
 *.pyc
 *.pyo
 .ipynb_checkpoints
+
+# VS Code
+.vscode
 
 # JetBrains
 .idea
@@ -24,10 +24,18 @@
 # Slide
 /slides/**/*_cache
 /slides/**/*_files
-/slides/**/libs
-/slides/**/generated
+/slides/**/_extensions
+/slides/**/images
+/slides/**/tmp
 /slides/**/*.html
-!/slides/_common/**
+/slides/**/*.pdf
+!/slides/extensions/**
+!/slides/theme/**
+
+# Docs
+site
 
 # Others
+.cache
 *.h5
+cdn

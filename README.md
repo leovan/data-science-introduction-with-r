@@ -21,8 +21,8 @@
 7. 《机器学习》周志华 著
 8. 《深度学习》(Deep Learning)，Ian Goodfellow, Yoshua Bengio & Aaron Courville 著，赵申剑、黎彧君、符天凡、李凯 译
 
-## 授权
+## 许可
 
-本项目遵守 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
+CC BY-NC-SA 4.0
 
-版权所有 &copy; 2019-2025，<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>
+版权所有 &copy; 2019-2026，<a href="https://leovan.me" target="_blank">范叶亮 | Leo Van</a>

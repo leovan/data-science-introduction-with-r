@@ -1,0 +1,35 @@
+<script>
+MathJax = {
+  loader: {
+    load: ['[tex]/boldsymbol']
+  },
+  tex: {
+    tags: "all",
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    packages: {
+      '[+]': ['boldsymbol']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pseudocode@latest/build/pseudocode.min.js"></script>
+<script type="text/javascript">
+function addTitleLogo(d) {
+  d.querySelector("#title-slide").innerHTML += "<img class='custom-title-logo' />";
+}
+
+function addSlideLogo(d) {
+  d.querySelectorAll(".slide:not(.title-slide):not(.end) > h2").forEach(el => {
+    el.innerHTML += "<img class='custom-slide-logo' />";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  addTitleLogo(document);
+  addSlideLogo(document);
+});
+</script>

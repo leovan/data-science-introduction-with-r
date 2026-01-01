@@ -1,0 +1,411 @@
+/*-- scss:defaults --*/
+
+// Colors
+$color-border: #444444;
+$color-background: #eeeeee;
+$color-link: #775695;
+$color-code-block-background: #f6f6f6;
+$color-inline-code: #222222;
+
+// Fonts
+$font-song: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia,
+  "Latin Modern Roman", "Linux Libertine", "Liberation Serif",
+  "Source Han Serif SC", "Source Han Serif TC", "Source Han Serif",
+  "Noto Serif CJK SC", "Noto Serif CJK TC", "Noto Serif CJK", "Songti SC",
+  STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung",
+  "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK",
+  "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, ui-serif, serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-hei: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
+  "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
+  "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
+  "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
+  SimHei, "WenQuanYi Zen Hei Sharp", ui-sans-serif, system-ui, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-kai: Palatino, "Palatino Linotype", "Palatino LT Std", Georgia,
+  "Latin Modern Roman", "Linux Libertine", "Liberation Serif", "Kaiti SC",
+  "Kaiti TC", STKaiti, "Kai", BiauKai, "AR PL UKai CN", "AR PL UKai HK",
+  "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312,
+  DFKai-SB, "TW\-Kai", ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-mono: Iosevka, "Iosevka Nerd", "Sarasa Mono", "Sarasa Mono SC",
+  "Sarasa Mono TC", Consolas, "Lucida Console", Menlo, Monaco, "Andale Mono",
+  "Ubuntu Mono", "Source Han Mono SC", "Source Han Mono TC", "Source Han Mono",
+  "Noto Sans Mono SC", "Noto Sans Mono TC", "Noto Sans Mono", monospace,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-link: "PT Sans Narrow", $font-song;
+$font-heading: "PT Sans Narrow", $font-song;
+
+$font-family-sans-serif: $font-song !default;
+$font-family-monospace: $font-mono !default;
+$presentation-font-size-root: 36px;
+$presentation-line-height: 1.4em;
+
+// Code Blocks
+$code-block-bg: $color-code-block-background;
+$code-color: $color-inline-code;
+
+// Headings
+$presentation-h1-font-size: 3em;
+$presentation-h2-font-size: 2em;
+$presentation-h3-font-size: 1.2em;
+$presentation-h4-font-size: 1em;
+$presentation-heading-font-weight: bold;
+
+// Layout
+$presentation-block-margin: 1em;
+
+// Custom
+$pdf-horizontal-space: 96px;
+$pdf-vertical-space: 54px;
+
+/*-- scss:rules --*/
+
+// Asides
+.reveal .slides aside {
+  font-size: 0.8em;
+}
+
+.reveal .slides aside p {
+  line-height: 1.2em;
+}
+
+// Callout
+.reveal .slides div.callout.callout-style-simple.callout-titled .callout-icon::before,
+.reveal .slides div.callout.callout-style-default.callout-titled .callout-icon::before {
+  margin-top: 0.5em;
+  padding-right: 0.5em;
+}
+
+.reveal .slides section div.callout {
+  font-size: 0.9em;
+}
+
+.reveal .slides .callout code,
+.reveal .slides .callout pre {
+  font-size: 1em;
+}
+
+.reveal .slides .callout-style-simple .callout-body,
+.reveal .slides .callout-style-simple .callout-content {
+  flex: 1;
+}
+
+.reveal div.callout.callout-style-simple:not(.callout-titled) .callout-icon::before {
+  margin-top: 0.5em;
+}
+
+.reveal div.callout.callout-style-simple:not(.callout-titled) .callout-body >.callout-content > :first-child {
+  margin-top: 0.5em;
+}
+
+.reveal div.callout.callout-style-simple:not(.callout-titled) .callout-body >.callout-content > :last-child {
+  margin-bottom: 0.5em;
+}
+
+// Code
+.reveal code {
+  font-size: 0.9em;
+}
+
+.reveal .slides code {
+  overflow: hidden;
+}
+
+.reveal .slides pre {
+  font-size: 0.9em;
+}
+
+.reveal .slides .code-copy-button {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0;
+}
+
+.reveal .slides div.code-copy-outer-scaffold:hover > .code-copy-button > .bi::before {
+  height: 2rem;
+  width: 2rem;
+  background-size: 2rem 2rem;
+}
+
+.reveal .slides pre.sourceCode code,
+.reveal .slides pre code {
+  padding: 0.4em;
+  max-height: 100%;
+  line-break: anywhere;
+  white-space: break-spaces;
+}
+
+.reveal .slides .cell {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+// Columns
+.reveal .slides .columns .column {
+  padding-left: 0em;
+  padding-right: 0em;
+  box-sizing: border-box;
+}
+
+.reveal .slides .columns .column:nth-child(1) {
+  padding-left: 0;
+  padding-right: 0.8em;
+}
+
+.reveal .slides .columns .column:nth-last-child(1) {
+  padding-left: 0.8em;
+  padding-right: 0;
+}
+
+.reveal .slides .column > :nth-child(1) {
+  margin-top: 0;
+}
+
+.reveal .slides .column > * {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+// Content
+.reveal .slides .content ul,
+.reveal .slides .content ol {
+  font-size: 1.2em;
+}
+
+.reveal .slides .slide.content ul li,
+.reveal .slides .slide.content ol li {
+  margin-top: 0.8em !important;
+  margin-bottom: 0.8em !important;
+}
+
+// Figure
+.reveal .slides figure>figcaption,
+.reveal .slides img.stretch+p.caption,
+.reveal .slides img.r-stretch+p.caption {
+  font-size: 1em;
+  text-align: center;
+}
+
+.reveal .slides .column :first-child img,
+.reveal .slides section :first-child:not(h2) img {
+  margin-top: 0;
+}
+
+.reveal .slides td :first-child img,
+.reveal .slides td img:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Headings
+.reveal .slides h1,
+.reveal .slides h2 {
+  font-family: $font-heading;
+}
+
+.reveal .slides h3,
+.reveal .slides h4 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.reveal .slides h3:last-child,
+.reveal .slides h4:last-child {
+  margin-bottom: 1em;
+}
+
+// Layout
+.center > * {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.left > * {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.right > * {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+// Link
+.reveal .slides a {
+  color: $color-link;
+  text-decoration: none;
+}
+
+.reveal .slides aside a {
+  font-family: $font-link;
+}
+
+// Lists
+.reveal .slides ul,
+.reveal .slides dl,
+.reveal .slides ol {
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.reveal .slides ul li,
+.reveal .slides dl li,
+.reveal .slides ol li {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+}
+
+// Logo
+.reveal .slides #title-slide .custom-title-logo {
+  opacity: 0.4;
+  margin: 0;
+  position: absolute;
+  height: 28rem;
+  bottom: -20rem;
+  right: 0;
+  z-index: -1;
+}
+
+.reveal .slides .custom-slide-logo {
+  margin: 0;
+  height: 1em;
+  float: right;
+  vertical-align: text-bottom;
+}
+
+// Pseudocode
+.reveal .slides .ps-root {
+  font-family: $font-song;
+  font-weight: normal;
+  font-smooth: auto;
+  -webkit-font-smoothing: auto !important;
+}
+
+.reveal .slides .column :first-child .ps-algorithm {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Table
+.reveal .slides table {
+  margin: auto;
+  border-top: 2px solid $color-border;
+  border-bottom: 2px solid $color-border;
+  border-spacing: 6px 6px;
+  border-collapse: separate;
+}
+
+.reveal .slides table caption {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.reveal .slides table th,
+.reveal .slides table td {
+  border-bottom: none;
+  vertical-align: middle;
+}
+
+.reveal .slides table thead,
+.reveal .slides table tfoot,
+.reveal .slides table tr:nth-child(even) {
+  background: $color-background;
+}
+
+.reveal .slides table th,
+.reveal .slides table td {
+  padding: 8px;
+}
+
+.reveal .slides table caption {
+  font-size: 1em;
+  text-align: center;
+}
+
+// Title
+.reveal .slides #title-slide {
+  font-family: $font-heading;
+  font-weight: bold;
+}
+
+.reveal .slides #title-slide h1.title {
+  margin-top: 16rem;
+  margin-bottom: 0.2em;
+}
+
+.reveal .slides #title-slide .subtitle {
+  font-size: 2.4em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.reveal .slides #title-slide .quarto-title-authors {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.reveal .slides #title-slide .quarto-title-author-name {
+  font-size: 1.6em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.reveal .slides #title-slide .quarto-title-affiliation {
+  font-size: 1.2em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.reveal .slides #title-slide .date {
+  font-size: 1.6em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.reveal .slides .title-slide {
+  text-align: center;
+}
+
+// End
+.reveal .slides .end {
+  text-align: center;
+}
+
+.reveal .slides .end p {
+  font-size: 1.2em;
+}
+
+.reveal .slides #fig-license {
+  margin: 0;
+  font-size: 1.4em;
+  vertical-align: middle;
+}
+
+// Print
+html.reveal-print .reveal .slides {
+  left: $pdf-horizontal-space !important;
+  right: $pdf-horizontal-space !important;
+}
+
+html.reveal-print .reveal .slides .slide:not(.center) {
+  top: $pdf-vertical-space !important;
+  bottom: $pdf-vertical-space !important;
+}
+
+html.reveal-print .reveal .slides .slide:not(.center) {
+  height: calc(100% - $pdf-vertical-space * 2);
+}
+
+html.reveal-print .reveal .slides .slide-number-pdf {
+  bottom: $pdf-vertical-space;
+  right: $pdf-horizontal-space;
+  font-size: 2rem;
+}
+
+html.reveal-print .reveal .slides #title-slide ~ .slide-number-pdf,
+html.reveal-print .reveal .slides .title-slide ~ .slide-number-pdf,
+html.reveal-print .reveal .slides .end ~ .slide-number-pdf {
+  display: none;
+}

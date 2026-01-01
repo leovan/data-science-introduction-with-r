@@ -1,0 +1,44 @@
+/* Button */
+.md-typeset .md-button--accent {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+.md-typeset .md-button--accent:focus,
+.md-typeset .md-button--accent:hover {
+  color: var(--md-accent-bg-color);
+  opacity: .8;
+}
+
+.md-typeset .md-button--small {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+}
+
+/* Iframe */
+.md-typeset iframe {
+  aspect-ratio: 16/9;
+  border-width: 0.05rem;
+  border-radius: 0.4rem;
+  border-style: solid;
+  border-color: var(--md-default-fg-color--lightest);
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+/* Table */
+.md-typeset .md-typeset__table {
+  min-width: 100%;
+  line-break: anywhere;
+}
+
+.md-typeset table:not([class]) {
+  display: table;
+  background: none;
+  border-radius: 0.4rem;
+
+  th {
+    border-bottom: 0.1rem solid var(--md-accent-fg-color);
+  }
+}
